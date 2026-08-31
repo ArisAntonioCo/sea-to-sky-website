@@ -93,3 +93,31 @@ export const testimonials = [
       "The management process felt more structured and the property performance became easier to understand.",
   },
 ];
+
+export const faqs = [
+  {
+    question: "What measures does Sea to Sky take to ensure guest satisfaction?",
+    answer:
+      "Guest satisfaction is paramount. We provide personalized communication before, during, and after each stay, offering local recommendations and promptly addressing any concerns. Our properties are meticulously cleaned and maintained to meet high standards, contributing to positive guest experiences and encouraging repeat bookings.",
+  },
+  {
+    question: "How does Sea to Sky ensure compliance with local regulations for short-term rentals?",
+    answer:
+      "We stay informed about local laws and regulations affecting short-term rentals. Our team ensures your property complies with all licensing, zoning, and tax requirements, helping you avoid potential fines and legal issues.",
+  },
+  {
+    question: "How does Sea to Sky handle property maintenance and emergencies?",
+    answer:
+      "We proactively manage property maintenance by conducting regular inspections and coordinating necessary repairs with trusted local professionals. In case of emergencies, our team is available 24/7 to address issues promptly, ensuring minimal disruption to guests and safeguarding your property.",
+  },
+  {
+    question: "Can I use my property whenever I want?",
+    answer:
+      "Yes! With Sea to Sky, you retain full control over your property’s availability. Just let us know your preferred dates, and we’ll block them off for your personal use.",
+  },
+  {
+    question: "How does Sea to Sky handle damages to the property?",
+    answer:
+      "If damages occur, we document them, handle claims through the booking platform, and coordinate repairs to protect your property.",
+  },
+];

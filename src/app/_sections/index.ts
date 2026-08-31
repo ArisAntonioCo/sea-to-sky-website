@@ -1,5 +1,6 @@
 export { ContactSection } from "./contact-section";
 export { EstimateSection } from "./estimate-section";
+export { FaqSection } from "./faq-section";
 export { HeroSection } from "./hero-section";
 export { PartnersSection } from "./partners-section";
 export { ProcessSection } from "./process-section";

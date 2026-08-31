@@ -1,13 +1,23 @@
 import { SiteFooter, SiteHeader } from "@/components/layout";
 
-import { AboutHeroSection } from "../_sections";
+import {
+  AboutCtaSection,
+  AboutHeroSection,
+  AboutTestimonialsSection,
+  DifferenceSection,
+  SpecialtiesSection,
+} from "../_sections";
 
 export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader />
-      <main className="pb-24 pt-10">
+      <main>
         <AboutHeroSection />
+        <SpecialtiesSection />
+        <AboutTestimonialsSection />
+        <DifferenceSection />
+        <AboutCtaSection />
       </main>
       <SiteFooter />
     </div>

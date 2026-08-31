@@ -3,6 +3,7 @@ import { SiteFooter, SiteHeader } from "@/components/layout";
 import {
   ContactSection,
   EstimateSection,
+  FaqSection,
   HeroSection,
   ProcessSection,
   PropertiesSection,
@@ -22,6 +23,7 @@ export function LandingPage() {
         <RevenueSection />
         <PropertiesSection />
         <TestimonialsSection />
+        <FaqSection />
         <EstimateSection />
         <ContactSection />
       </main>
