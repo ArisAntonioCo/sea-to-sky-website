@@ -32,7 +32,7 @@ export function PartnersSection() {
                     width={250}
                     height={180}
                     loading={group === 0 ? "eager" : "lazy"}
-                    className="max-h-20 w-auto max-w-40 object-contain brightness-0 opacity-65 transition-opacity duration-300 hover:opacity-100 sm:max-h-24 sm:max-w-44"
+                    className="max-h-20 w-auto max-w-40 object-contain opacity-65 transition-opacity duration-300 hover:opacity-100 sm:max-h-24 sm:max-w-44"
                   />
                 </div>
               ))}

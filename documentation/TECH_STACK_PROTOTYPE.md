@@ -48,7 +48,7 @@ Use the lightest tool that matches the job.
 
 ### Optional Enhancements
 
-- `Lenis` for smoother scroll feel if needed
+- `Lenis` for reduced-motion-aware, page-level inertial scrolling
 - `GSAP` for hero sections or more choreographed storytelling sequences
 
 ### Parallax Strategy

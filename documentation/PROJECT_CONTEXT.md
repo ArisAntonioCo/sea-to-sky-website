@@ -21,7 +21,8 @@ The current goal is:
 - Package manager: `pnpm`
 - Deployment target: `Vercel`
 - Motion baseline: `CSS + Motion`
-- Optional motion additions later: `Lenis`, `GSAP`
+- Page-level smooth scrolling: `Lenis`
+- Optional motion addition later: `GSAP`
 - CMS: not included in prototype
 - Backend/API: not included unless needed later
 

@@ -13,11 +13,11 @@ export function AnimatedCounter({ prefix = "", suffix = "", target }: AnimatedCo
   const counterRef = useRef<HTMLSpanElement>(null);
   const isInView = useInView(counterRef, { amount: 0.6, once: true });
   const shouldReduceMotion = useReducedMotion();
-  const [value, setValue] = useState(shouldReduceMotion ? target : 0);
+  const [value, setValue] = useState(0);
+  const displayValue = shouldReduceMotion ? target : value;
 
   useEffect(() => {
     if (!isInView || shouldReduceMotion) {
-      if (shouldReduceMotion) setValue(target);
       return;
     }
 
@@ -32,7 +32,7 @@ export function AnimatedCounter({ prefix = "", suffix = "", target }: AnimatedCo
 
   return (
     <span ref={counterRef} aria-hidden="true">
-      {prefix}{value}{suffix}
+      {prefix}{displayValue}{suffix}
     </span>
   );
 }

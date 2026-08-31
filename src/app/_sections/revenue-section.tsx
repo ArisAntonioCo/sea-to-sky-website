@@ -27,6 +27,7 @@ export function RevenueSection() {
               src="/Images/performance-section.png"
               alt="A property manager reviewing performance information on a phone"
               fill
+              loading="eager"
               sizes="(min-width: 1024px) 52vw, 100vw"
               className="object-cover"
             />
