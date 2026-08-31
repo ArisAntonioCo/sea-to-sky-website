@@ -4,7 +4,7 @@ import { ServicesHeroSection } from "../_sections";
 
 export function ServicesPage() {
   return (
-    <div className="min-h-screen bg-sand-50">
+    <div className="min-h-screen bg-white">
       <SiteHeader />
       <main className="pb-24 pt-10">
         <ServicesHeroSection />

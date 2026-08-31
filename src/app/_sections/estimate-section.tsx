@@ -8,7 +8,7 @@ import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 
 export function EstimateSection() {
   return (
-    <section id="estimate" className="bg-sand-50 py-24 sm:py-32 lg:py-40">
+    <section id="estimate" className="bg-white py-24 sm:py-32 lg:py-40">
       <div className="section-shell grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
         <Reveal>
           <div className="lg:sticky lg:top-32">
@@ -53,7 +53,7 @@ export function EstimateSection() {
               <Label htmlFor="estimate-email">Email address</Label>
               <Input id="estimate-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" className="h-12 rounded-none border-x-0 border-t-0 px-0 focus-visible:ring-0" />
             </div>
-            <Button type="button" className="mt-3 h-13 w-fit rounded-full bg-sea-800 px-7 text-white hover:bg-sea-700 sm:col-span-2">
+            <Button type="button" className="mt-3 h-13 w-fit rounded-full bg-sea-800 px-7 !text-white hover:bg-sea-700 sm:col-span-2">
               Request estimate
               <ArrowRight className="size-4" />
             </Button>

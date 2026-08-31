@@ -36,14 +36,16 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300",
+        isScrolled
+          ? "border-sea-900/10 bg-white shadow-[0_8px_32px_rgba(17,41,48,0.08)]"
+          : "border-transparent bg-white",
+      )}
+    >
       <div
-        className={cn(
-          "pointer-events-auto mx-auto flex h-16 max-w-[90rem] items-center justify-between rounded-2xl border px-4 transition-[background-color,border-color,box-shadow] duration-300 sm:h-[4.5rem] sm:px-6",
-          isScrolled
-            ? "border-white/70 bg-white/92 shadow-[0_12px_40px_rgba(17,41,48,0.1)] backdrop-blur-xl"
-            : "border-white/45 bg-white/86 shadow-[0_8px_30px_rgba(17,41,48,0.06)] backdrop-blur-md",
-        )}
+        className="mx-auto flex h-20 w-full max-w-[100rem] items-center justify-between px-5 sm:h-24 sm:px-8 lg:px-12"
       >
         <Link
           href="/"
@@ -55,13 +57,14 @@ export function SiteHeader() {
             width={1082}
             height={284}
             priority
-            className="h-auto w-32 sm:w-36"
+            loading="eager"
+            className="h-auto w-36 mix-blend-multiply sm:w-44"
           />
         </Link>
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-8 text-[0.94rem] text-ink-700 lg:flex"
+          className="hidden items-center gap-9 text-base text-ink-700 lg:flex"
         >
           {navigation.map((item) => (
             <Link
@@ -78,7 +81,7 @@ export function SiteHeader() {
           <Button
             render={<Link href="/#estimate" />}
             nativeButton={false}
-            className="hidden h-11 rounded-full bg-sea-800 px-5 text-sm text-white hover:bg-sea-700 sm:inline-flex"
+            className="hidden h-12 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700 sm:inline-flex"
           >
             Get an estimate
           </Button>
@@ -96,7 +99,7 @@ export function SiteHeader() {
             >
               <Menu className="size-5" />
             </SheetTrigger>
-            <SheetContent className="w-full border-none bg-sand-50 p-0 sm:max-w-md">
+            <SheetContent className="w-full border-none bg-white p-0 sm:max-w-md">
               <SheetHeader className="border-b border-sea-900/10 px-6 py-6">
                 <SheetTitle className="sr-only">Site navigation</SheetTitle>
                 <SheetDescription className="sr-only">
@@ -107,7 +110,8 @@ export function SiteHeader() {
                   alt="Sea to Sky"
                   width={1082}
                   height={284}
-                  className="h-auto w-36"
+                  loading="eager"
+                  className="h-auto w-36 mix-blend-multiply"
                 />
               </SheetHeader>
               <nav aria-label="Mobile navigation" className="flex flex-col px-6 py-8">
@@ -125,7 +129,7 @@ export function SiteHeader() {
               <div className="mt-auto p-6">
                 <SheetClose
                   render={<Link href="/#estimate" />}
-                  className="flex min-h-12 w-full items-center justify-center rounded-full bg-sea-800 px-6 font-medium text-white"
+                  className="flex min-h-12 w-full items-center justify-center rounded-full bg-sea-800 px-6 font-medium !text-white"
                 >
                   Get an estimate
                 </SheetClose>

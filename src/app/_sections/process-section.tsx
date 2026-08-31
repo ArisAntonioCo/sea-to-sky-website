@@ -4,7 +4,7 @@ import { processSteps } from "./homepage-content";
 
 export function ProcessSection() {
   return (
-    <section id="approach" className="bg-sand-50 py-24 sm:py-32 lg:py-40">
+    <section id="approach" className="bg-white pb-24 pt-16 sm:pb-28 sm:pt-20 lg:pb-32 lg:pt-24">
       <div className="section-shell grid gap-16 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
         <div className="lg:sticky lg:top-32 lg:h-fit">
           <Reveal>

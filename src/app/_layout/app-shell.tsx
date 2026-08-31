@@ -19,7 +19,7 @@ export function AppShell({ children }: AppShellProps) {
       lang="en"
       className={`${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full overflow-x-hidden bg-sand-50 text-slate-950">
+      <body className="min-h-full overflow-x-hidden bg-white text-slate-950">
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>

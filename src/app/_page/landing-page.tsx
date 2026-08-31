@@ -4,7 +4,6 @@ import {
   ContactSection,
   EstimateSection,
   HeroSection,
-  PartnersSection,
   ProcessSection,
   PropertiesSection,
   RevenueSection,
@@ -14,14 +13,13 @@ import {
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen bg-sand-50">
+    <div className="min-h-screen bg-white">
       <SiteHeader />
       <main>
         <HeroSection />
         <ProcessSection />
-        <PartnersSection />
-        <RevenueSection />
         <SatisfactionSection />
+        <RevenueSection />
         <PropertiesSection />
         <TestimonialsSection />
         <EstimateSection />
