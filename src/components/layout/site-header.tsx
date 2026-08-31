@@ -45,7 +45,7 @@ export function SiteHeader() {
       )}
     >
       <div
-        className="mx-auto flex h-20 w-full max-w-[100rem] items-center justify-between px-5 sm:h-24 sm:px-8 lg:px-12"
+        className="flex h-20 w-full items-center justify-between px-7 sm:h-24 sm:px-11 lg:px-16"
       >
         <Link
           href="/"

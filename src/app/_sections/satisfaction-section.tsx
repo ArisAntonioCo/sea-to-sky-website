@@ -1,4 +1,5 @@
-import { Reveal } from "@/components/motion";
+import { AnimatedCounter, Reveal } from "@/components/motion";
+import { cn } from "@/lib/utils";
 
 import { satisfactionStats } from "./homepage-content";
 
@@ -23,8 +24,15 @@ export function SatisfactionSection() {
         <div className="mt-20 grid border-t border-white/18 sm:grid-cols-2 lg:grid-cols-5">
           {satisfactionStats.map((item, index) => (
             <Reveal key={item.label} delay={index * 0.06}>
-              <article className="min-h-48 border-b border-white/18 py-8 pr-6 sm:min-h-52 sm:border-r lg:border-b-0 lg:pl-6 first:pl-0">
-                <p className="text-4xl font-medium sm:text-5xl">{item.value}</p>
+              <article
+                className={cn(
+                  "min-h-48 px-5 py-8 sm:min-h-52 sm:px-6 lg:px-7",
+                  index < satisfactionStats.length - 1 && "border-b border-white/18 sm:border-r lg:border-b-0",
+                )}
+              >
+                <p aria-label={item.display} className="text-4xl font-medium sm:text-5xl">
+                  <AnimatedCounter target={item.target} suffix={item.suffix} />
+                </p>
                 <p className="mt-5 max-w-40 text-sm leading-6 text-white/62">{item.label}</p>
               </article>
             </Reveal>

@@ -1,16 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 import { Reveal } from "@/components/motion";
 
 import { properties } from "./homepage-content";
-
-const placeholderBackgrounds = [
-  "linear-gradient(150deg, #aeb4a3 0%, #647a67 45%, #263f3b 100%)",
-  "linear-gradient(150deg, #d7c2a3 0%, #9b8264 42%, #475654 100%)",
-  "linear-gradient(150deg, #b7cad0 0%, #577987 48%, #1d424d 100%)",
-  "linear-gradient(150deg, #bcc8ca 0%, #6d8990 48%, #243d44 100%)",
-  "linear-gradient(150deg, #d3c9b7 0%, #87928c 46%, #314a4a 100%)",
-];
 
 export function PropertiesSection() {
   return (
@@ -24,7 +17,7 @@ export function PropertiesSection() {
             </h2>
           </div>
           <p className="max-w-sm text-base leading-7 text-ink-700">
-            Photography remains intentionally replaceable during this prototype phase.
+            A considered portfolio spanning coastal escapes, mountain homes, and city stays.
           </p>
         </Reveal>
 
@@ -41,16 +34,19 @@ export function PropertiesSection() {
               <Reveal key={`${property.type}-${property.location}`} className={widthClass} delay={(index % 2) * 0.08}>
                 <article className="group">
                   <div
-                    role="img"
-                    aria-label={`${property.type} in ${property.location} media placeholder`}
                     className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] sm:aspect-[16/11]"
-                    style={{ background: placeholderBackgrounds[index] }}
                   >
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(255,255,255,0.38),transparent_19%),linear-gradient(180deg,transparent_48%,rgba(13,42,46,0.44))] transition-transform duration-700 group-hover:scale-[1.025]" />
+                    <Image
+                      src={property.image}
+                      alt={`${property.type} in ${property.location}`}
+                      fill
+                      sizes="(min-width: 1024px) 58vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-sea-950/45 via-transparent to-transparent" />
                     <span className="absolute right-4 top-4 rounded-full border border-white/35 bg-white/14 p-3 text-white backdrop-blur-md">
                       <ArrowUpRight className="size-5" />
                     </span>
-                    <span className="absolute bottom-4 left-4 text-xs text-white/68">Property media placeholder</span>
                   </div>
                   <div className="flex items-start justify-between gap-5 pt-5">
                     <div>

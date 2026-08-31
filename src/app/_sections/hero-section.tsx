@@ -1,9 +1,9 @@
 "use client";
 
 import { ArrowDownRight } from "lucide-react";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 
@@ -11,47 +11,33 @@ import { heroContent } from "./homepage-content";
 import { PartnersSection } from "./partners-section";
 
 export function HeroSection() {
-  const sectionRef = useRef<HTMLElement>(null);
   const shouldReduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  const backgroundY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    shouldReduceMotion ? ["0%", "0%"] : ["0%", "14%"],
-  );
-  const contentY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    shouldReduceMotion ? [0, 0] : [0, 90],
-  );
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.72], [1, 0]);
 
   return (
     <section
-      ref={sectionRef}
       id="home"
       className="relative min-h-svh overflow-hidden bg-white px-2 pt-20 text-white sm:px-3 sm:pt-24 lg:px-4"
     >
-      <div className="mx-auto flex min-h-[calc(100svh-5rem)] max-w-[100rem] flex-col sm:min-h-[calc(100svh-6rem)]">
+      <div className="flex min-h-[calc(100svh-5rem)] w-full flex-col sm:min-h-[calc(100svh-6rem)]">
         <div className="relative isolate flex min-h-[36rem] flex-1 overflow-hidden rounded-[1.5rem] bg-sea-950 [clip-path:inset(0_round_1.5rem)] sm:min-h-[39rem] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
-          <motion.div
-            aria-label="Hero media placeholder for scenic Sea to Sky footage"
-            role="img"
-            className="media-placeholder absolute -inset-x-8 -top-[14%] h-[128%] will-change-transform"
-            style={{ y: backgroundY }}
+          <div
+            data-media-slot="hero"
+            className="absolute inset-0"
           >
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,31,38,0.74)_0%,rgba(10,31,38,0.28)_58%,rgba(10,31,38,0.5)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-[62%] bg-[linear-gradient(150deg,transparent_0_26%,rgba(12,45,51,0.66)_26.2%_43%,rgba(10,35,42,0.9)_43.2%)] [clip-path:polygon(0_12%,31%_47%,50%_30%,72%_58%,100%_28%,100%_100%,0_100%)]" />
-            <div className="absolute -right-[8%] top-[18%] h-[48vw] w-[48vw] rounded-full border border-white/14" />
-            <div className="absolute -right-[2%] top-[24%] h-[36vw] w-[36vw] rounded-full border border-white/10" />
-          </motion.div>
+            <Image
+              src="/Images/hero-image.png"
+              alt="The Sea to Sky corridor winding along the British Columbia coast"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,33,0.76)_0%,rgba(7,27,33,0.28)_60%,rgba(7,27,33,0.16)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-sea-950/70 to-transparent" />
+          </div>
 
           <motion.div
             className="relative z-10 flex min-h-full w-full flex-col justify-end px-5 py-9 sm:px-8 sm:py-12 lg:px-10 lg:py-14 xl:px-12"
-            style={{ opacity: contentOpacity, y: contentY }}
           >
             <div className="max-w-6xl">
               <motion.p
@@ -95,7 +81,7 @@ export function HeroSection() {
           </motion.div>
 
           <p className="absolute bottom-3 right-4 z-10 text-xs text-white/42 sm:bottom-5 sm:right-6">
-            Scenic hero media placeholder
+            Media credit
           </p>
         </div>
 

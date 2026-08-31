@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
-import { ParallaxLayer, Reveal } from "@/components/motion";
+import { Reveal } from "@/components/motion";
 
 import { revenuePillars } from "./homepage-content";
 
@@ -21,19 +22,20 @@ export function RevenueSection() {
         </Reveal>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
-          <ParallaxLayer className="min-h-[34rem] rounded-[1.75rem]" distance={42}>
-            <div
-              role="img"
-              aria-label="Property optimization media placeholder"
-              className="media-placeholder relative h-[calc(100%+6rem)] min-h-[40rem]"
-            >
+          <div className="relative min-h-[40rem] overflow-hidden rounded-[1.75rem]">
+            <Image
+              src="/Images/performance-section.png"
+              alt="A property manager reviewing performance information on a phone"
+              fill
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="object-cover"
+            />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(11,43,50,0.58)_100%)]" />
               <div className="absolute bottom-24 left-8 right-8 rounded-2xl border border-white/30 bg-white/12 p-6 text-white backdrop-blur-md sm:left-auto sm:w-72">
-                <p className="text-sm text-white/66">Media placeholder</p>
+                <p className="text-sm text-white/66">Thoughtful oversight</p>
                 <p className="mt-2 text-xl leading-7">Property details, local context, and a sense of place.</p>
               </div>
-            </div>
-          </ParallaxLayer>
+          </div>
 
           <div className="self-center">
             {revenuePillars.map((pillar, index) => (

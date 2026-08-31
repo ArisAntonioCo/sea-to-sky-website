@@ -52,19 +52,19 @@ export const revenuePillars = [
 ];
 
 export const satisfactionStats = [
-  { value: "98%", label: "Guest Satisfaction Rating" },
-  { value: "24/7", label: "Support" },
-  { value: "10", label: "Years of Experience" },
-  { value: "1M+", label: "Revenue Generated for Owners" },
-  { value: "85%", label: "Occupancy Rate Year-Round" },
+  { target: 98, suffix: "%", display: "98%", label: "Guest Satisfaction Rating" },
+  { target: 24, suffix: "/7", display: "24/7", label: "Support" },
+  { target: 10, suffix: "", display: "10", label: "Years of Experience" },
+  { target: 1, suffix: "M+", display: "1M+", label: "Revenue Generated for Owners" },
+  { target: 85, suffix: "%", display: "85%", label: "Occupancy Rate Year-Round" },
 ];
 
 export const properties = [
-  { type: "Villa", location: "Tulum, Mexico", size: "large" },
-  { type: "Villa", location: "Playa del Carmen, Mexico", size: "standard" },
-  { type: "House", location: "Squamish, BC", size: "standard" },
-  { type: "Penthouse", location: "Vancouver, BC", size: "wide" },
-  { type: "Condo", location: "Vancouver, BC", size: "standard" },
+  { type: "Villa", location: "Tulum, Mexico", size: "large", image: "/Images/properties/tulum-mexico.png" },
+  { type: "Villa", location: "Playa del Carmen, Mexico", size: "standard", image: "/Images/properties/playa-del-carmen-mexico.png" },
+  { type: "House", location: "Squamish, BC", size: "standard", image: "/Images/properties/Squamish-BC.png" },
+  { type: "Penthouse", location: "Vancouver, BC", size: "wide", image: "/Images/properties/Vancouver-bc.png" },
+  { type: "Condo", location: "Vancouver, BC", size: "standard", image: "/Images/properties/vancouver-bc-2.png" },
 ];
 
 export const testimonials = [

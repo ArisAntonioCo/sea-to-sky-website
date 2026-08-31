@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import type { ReactNode } from "react";
 
+import { SmoothScroll } from "@/components/motion";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const outfit = Outfit({
@@ -20,7 +21,9 @@ export function AppShell({ children }: AppShellProps) {
       className={`${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-white text-slate-950">
-        <TooltipProvider>{children}</TooltipProvider>
+        <SmoothScroll>
+          <TooltipProvider>{children}</TooltipProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
