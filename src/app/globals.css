@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e8;
+  --foreground: #17212b;
+  --sand-50: #f6f1e8;
+  --sand-100: #ebe0cd;
+  --sand-400: #c0996f;
+  --sea-500: #3b6978;
+  --sea-700: #244650;
+  --slate-950: #17212b;
+  --slate-700: #44525d;
+  --white: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sand-50: var(--sand-50);
+  --color-sand-100: var(--sand-100);
+  --color-sand-400: var(--sand-400);
+  --color-sea-500: var(--sea-500);
+  --color-sea-700: var(--sea-700);
+  --color-slate-950: var(--slate-950);
+  --color-slate-700: var(--slate-700);
+  --color-white: var(--white);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(59, 105, 120, 0.2);
+}
+
+.grain-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.6), transparent 32%);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+}
