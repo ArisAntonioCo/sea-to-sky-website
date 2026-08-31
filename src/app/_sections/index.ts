@@ -1,6 +1,9 @@
-export { ContactCtaSection } from "./contact-cta-section";
+export { ContactSection } from "./contact-section";
+export { EstimateSection } from "./estimate-section";
 export { HeroSection } from "./hero-section";
+export { PartnersSection } from "./partners-section";
 export { ProcessSection } from "./process-section";
-export { ServicesSection } from "./services-section";
-export { StatsSection } from "./stats-section";
+export { PropertiesSection } from "./properties-section";
+export { RevenueSection } from "./revenue-section";
+export { SatisfactionSection } from "./satisfaction-section";
 export { TestimonialsSection } from "./testimonials-section";

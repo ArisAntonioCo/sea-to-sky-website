@@ -1,11 +1,14 @@
 import { SiteFooter, SiteHeader } from "@/components/layout";
 
 import {
-  ContactCtaSection,
+  ContactSection,
+  EstimateSection,
   HeroSection,
+  PartnersSection,
   ProcessSection,
-  ServicesSection,
-  StatsSection,
+  PropertiesSection,
+  RevenueSection,
+  SatisfactionSection,
   TestimonialsSection,
 } from "../_sections";
 
@@ -15,11 +18,14 @@ export function LandingPage() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <StatsSection />
-        <ServicesSection />
         <ProcessSection />
+        <PartnersSection />
+        <RevenueSection />
+        <SatisfactionSection />
+        <PropertiesSection />
         <TestimonialsSection />
-        <ContactCtaSection />
+        <EstimateSection />
+        <ContactSection />
       </main>
       <SiteFooter />
     </div>

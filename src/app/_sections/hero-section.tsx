@@ -1,52 +1,49 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+import { heroContent, topNavigation } from "./homepage-content";
 
 export function HeroSection() {
   return (
-    <section className="section-shell pb-16 pt-10 sm:pt-14">
-      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-white px-8 py-12 shadow-[0_24px_90px_rgba(23,33,43,0.08)] sm:px-10">
-          <p className="text-sm font-medium uppercase tracking-[0.28em] text-sea-700">
-            Sea to Sky Prototype
-          </p>
-          <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-6xl">
-            A cleaner Next.js foundation for a faster marketing site redesign.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            This prototype is structured for fast page iteration, clear section ownership,
-            and an easier handoff once design direction is approved.
-          </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
-            >
-              Prototype contact flow
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full border border-black/10 px-6 py-3 text-sm font-medium text-slate-950 transition-colors hover:bg-slate-950 hover:text-white"
-            >
-              View services page
-            </Link>
+    <section className="relative overflow-hidden bg-[linear-gradient(140deg,#1b2d39_0%,#355a6c_38%,#7ca1b8_100%)] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#9ac3e6_0%,transparent_36%),linear-gradient(to_bottom,rgba(0,0,0,0.18),rgba(0,0,0,0.32))]" />
+      <div className="relative min-h-[860px]">
+        <div className="absolute left-0 top-0 z-10 hidden h-full w-24 border-r border-white/15 bg-white/94 text-slate-700 lg:flex lg:flex-col lg:items-center">
+          <div className="flex h-32 w-full items-center justify-center border-b border-slate-200">
+            <span className="text-[1.9rem] font-semibold tracking-[-0.05em] text-sea-700">
+              sea to sky
+            </span>
           </div>
+          <p className="mb-auto mt-auto [writing-mode:vertical-rl] rotate-180 text-xs font-medium uppercase tracking-[0.5em] text-slate-500">
+            {heroContent.railLabel}
+          </p>
         </div>
-        <div className="grid gap-6">
-          <div className="rounded-[2rem] bg-[linear-gradient(160deg,#244650_0%,#3b6978_62%,#d7c19f_100%)] p-8 text-white shadow-[0_24px_90px_rgba(36,70,80,0.28)]">
-            <p className="text-sm uppercase tracking-[0.24em] text-white/74">
-              Motion Strategy
-            </p>
-            <p className="mt-4 text-2xl font-semibold tracking-tight">
-              Default to CSS and Motion. Add GSAP only where the design earns it.
-            </p>
+        <div className="section-shell relative flex min-h-[860px] flex-col px-6 pt-8 sm:px-8 lg:pl-32">
+          <div className="flex items-center justify-between">
+            <div className="rounded-2xl bg-white/94 px-6 py-5 text-sea-700 shadow-lg lg:hidden">
+              <span className="text-2xl font-semibold tracking-[-0.05em]">sea to sky</span>
+            </div>
+            <nav className="ml-auto hidden gap-10 text-lg font-semibold md:flex">
+              {topNavigation.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </nav>
           </div>
-          <div className="rounded-[2rem] border border-black/6 bg-sand-100 px-8 py-8">
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-700">
-              Handoff Priority
-            </p>
-            <p className="mt-4 text-base leading-8 text-slate-950">
-              Shared site chrome, page folders, and page-specific sections make this easier
-              to extend without turning the prototype into a monolith.
-            </p>
+          <div className="mx-auto flex flex-1 max-w-5xl flex-col items-center justify-center text-center">
+            <h1 className="max-w-5xl text-6xl font-semibold tracking-[-0.06em] sm:text-7xl lg:text-[7.25rem] lg:leading-[0.92]">
+              <span className="block">{heroContent.titleTop}</span>
+              <span className="mt-2 block font-normal">{heroContent.titleBottom}</span>
+            </h1>
+            <div className="mt-8 space-y-4 text-lg leading-8 text-white/92 sm:text-2xl sm:leading-10">
+              {heroContent.lines.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+            <Button
+              size="lg"
+              className="mt-12 h-14 min-w-48 rounded-none bg-sea-700 px-10 text-base font-semibold text-white hover:bg-sea-500"
+            >
+              {heroContent.cta}
+            </Button>
           </div>
         </div>
       </div>

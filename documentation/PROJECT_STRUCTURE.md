@@ -1,6 +1,6 @@
 # Sea to Sky Prototype Structure
 
-Last updated: September 1, 2026
+Last updated: August 31, 2026
 
 ## Folder Strategy
 
@@ -11,6 +11,7 @@ The project is organized for **page ownership** and **section-level iteration** 
 - `src/app/page.tsx`
 - `src/app/_page`
 - `src/app/_sections`
+- `src/app/_layout`
 - `src/app/about/page.tsx`
 - `src/app/about/_page`
 - `src/app/about/_sections`
@@ -22,6 +23,8 @@ The project is organized for **page ownership** and **section-level iteration** 
 - `src/app/contact/_sections`
 
 Each `page.tsx` stays minimal and imports only one main page component from its local `_page` folder.
+
+The root `layout.tsx` also stays thin and delegates the HTML and body shell to `src/app/_layout`.
 
 ### Shared Components
 

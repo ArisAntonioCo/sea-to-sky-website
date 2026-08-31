@@ -1,6 +1,6 @@
 # Sea to Sky Prototype Context
 
-Last updated: September 1, 2026
+Last updated: August 31, 2026
 
 ## Project Status
 
@@ -35,6 +35,7 @@ The current goal is:
 - `src/config`: navigation and lightweight configuration
 - `src/lib`: utilities
 - `documentation`: planning and context documents
+- `documentation/homepage-sections`: section-by-section homepage content references
 
 ## Prototype Note
 
