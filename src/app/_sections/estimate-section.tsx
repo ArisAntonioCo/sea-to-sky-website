@@ -8,7 +8,7 @@ import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 
 export function EstimateSection() {
   return (
-    <section id="estimate" className="bg-white py-24 sm:py-32 lg:py-40">
+    <section id="estimate" className="scroll-mt-24 bg-white py-24 sm:py-32 lg:py-40">
       <div className="section-shell grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
         <Reveal>
           <div className="lg:sticky lg:top-32">

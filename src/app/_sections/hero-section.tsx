@@ -16,7 +16,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-svh overflow-hidden bg-white px-2 pt-20 text-white sm:px-3 sm:pt-24 lg:px-4"
+      className="relative min-h-svh scroll-mt-24 overflow-hidden bg-white px-2 pt-20 text-white sm:px-3 sm:pt-24 lg:px-4"
     >
       <div className="flex min-h-[calc(100svh-5rem)] w-full flex-col sm:min-h-[calc(100svh-6rem)]">
         <div className="relative isolate flex min-h-[36rem] flex-1 overflow-hidden rounded-[1.5rem] bg-sea-950 [clip-path:inset(0_round_1.5rem)] sm:min-h-[39rem] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
@@ -80,9 +80,6 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          <p className="absolute bottom-3 right-4 z-10 text-xs text-white/42 sm:bottom-5 sm:right-6">
-            Media credit
-          </p>
         </div>
 
         <PartnersSection />

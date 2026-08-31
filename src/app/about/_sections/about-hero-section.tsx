@@ -32,7 +32,6 @@ export function AboutHeroSection() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-sea-950/55 via-transparent to-transparent lg:bg-gradient-to-r lg:from-sea-950/35 lg:to-transparent" />
-          <p className="absolute bottom-5 right-6 text-xs text-white/55">Media credit</p>
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-sea-700 py-24 text-white sm:py-32 lg:py-40">
+    <section id="contact" className="scroll-mt-24 bg-sea-700 py-24 text-white sm:py-32 lg:py-40">
       <div className="section-shell">
         <Reveal>
           <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">

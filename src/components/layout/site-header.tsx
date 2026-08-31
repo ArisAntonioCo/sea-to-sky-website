@@ -40,15 +40,15 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300",
         isScrolled
-          ? "border-sea-900/10 bg-white shadow-[0_8px_32px_rgba(17,41,48,0.08)]"
-          : "border-transparent bg-white",
+          ? "border-sea-900/10 bg-white"
+          : "border-transparent bg-transparent",
       )}
     >
       <div
         className="flex h-20 w-full items-center justify-between px-7 sm:h-24 sm:px-11 lg:px-16"
       >
         <Link
-          href="/"
+          href="/#home"
           className="inline-flex min-h-11 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sea-500 focus-visible:ring-offset-2"
         >
           <Image

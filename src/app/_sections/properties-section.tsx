@@ -76,7 +76,7 @@ export function PropertiesSection() {
   });
 
   return (
-    <section id="properties" className="bg-sand-100 py-24 sm:py-32 lg:py-40">
+    <section id="properties" className="scroll-mt-24 bg-sand-100 py-24 sm:py-32 lg:py-40">
       <div className="section-shell">
         <Reveal className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
           <div>
