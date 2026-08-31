@@ -1,37 +1,58 @@
+import { ArrowUpRight } from "lucide-react";
+
+import { ParallaxLayer, Reveal } from "@/components/motion";
+
 import { revenuePillars } from "./homepage-content";
 
 export function RevenueSection() {
   return (
-    <section className="section-shell py-24">
-      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-sea-700">
-            We Maximize Your Revenue
+    <section className="bg-white py-24 sm:py-32 lg:py-40">
+      <div className="section-shell">
+        <Reveal className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="text-base font-medium text-sea-700">Performance, thoughtfully managed</p>
+            <h2 className="mt-5 max-w-3xl text-4xl font-medium leading-[1.05] text-ink-950 sm:text-6xl lg:text-7xl">
+              More revenue without losing the human touch.
+            </h2>
+          </div>
+          <p className="max-w-xl text-lg leading-8 text-ink-700 lg:justify-self-end">
+            Data informs every decision, while local knowledge and responsive guest care turn those decisions into stronger stays.
           </p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-            Revenue scaffolding built around the site&apos;s existing service narrative.
-          </h2>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700">
-            The live site emphasizes expert strategies, dynamic pricing, optimized
-            listings, and local market insight as the core levers for occupancy and return.
-          </p>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {revenuePillars.map((pillar) => (
-            <article
-              key={pillar}
-              className="rounded-[1.75rem] border border-border bg-white p-7 shadow-sm"
+        </Reveal>
+
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
+          <ParallaxLayer className="min-h-[34rem] rounded-[1.75rem]" distance={42}>
+            <div
+              role="img"
+              aria-label="Property optimization media placeholder"
+              className="media-placeholder relative h-[calc(100%+6rem)] min-h-[40rem]"
             >
-              <p className="text-sm font-medium uppercase tracking-[0.24em] text-sea-700">
-                Revenue Pillar
-              </p>
-              <h3 className="mt-4 text-2xl font-semibold text-slate-950">{pillar}</h3>
-              <p className="mt-3 text-base leading-8 text-slate-700">
-                Replace this scaffold text with the approved explanation for{" "}
-                {pillar.toLowerCase()}.
-              </p>
-            </article>
-          ))}
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(11,43,50,0.58)_100%)]" />
+              <div className="absolute bottom-24 left-8 right-8 rounded-2xl border border-white/30 bg-white/12 p-6 text-white backdrop-blur-md sm:left-auto sm:w-72">
+                <p className="text-sm text-white/66">Media placeholder</p>
+                <p className="mt-2 text-xl leading-7">Property details, local context, and a sense of place.</p>
+              </div>
+            </div>
+          </ParallaxLayer>
+
+          <div className="self-center">
+            {revenuePillars.map((pillar, index) => (
+              <Reveal key={pillar.title} delay={index * 0.06}>
+                <article className="group grid grid-cols-[auto_1fr_auto] gap-5 border-t border-sea-900/16 py-7">
+                  <span className="pt-1 text-sm text-sea-600">0{index + 1}</span>
+                  <div>
+                    <h3 className="text-2xl font-medium text-ink-950 sm:text-3xl">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-3 max-w-lg text-base leading-7 text-ink-700">
+                      {pillar.description}
+                    </p>
+                  </div>
+                  <ArrowUpRight className="mt-1 size-5 text-sea-700 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

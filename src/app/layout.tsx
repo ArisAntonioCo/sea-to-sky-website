@@ -3,8 +3,9 @@ import { AppShell } from "./_layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sea to Sky Rental Prototype",
-  description: "Prototype redesign for the Sea to Sky Rental marketing website.",
+  title: "Sea to Sky | Short-Term Rental Management",
+  description:
+    "A prototype redesign for Sea to Sky short-term rental and property management.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

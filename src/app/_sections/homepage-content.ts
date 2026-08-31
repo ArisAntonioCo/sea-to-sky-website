@@ -1,42 +1,54 @@
-export const topNavigation = ["Home", "Company", "Blog", "Contact"];
-
 export const heroContent = {
-  railLabel: "Property Management Services",
+  eyebrow: "Property management services",
   titleTop: "Sea to Sky",
-  titleBottom: "Short-Term Rental",
-  lines: [
-    "Guaranteed increase to your monthly short-term rental revenue.",
-    "We use customer service to drive your star ratings, visibility and revenue higher!",
-  ],
+  titleBottom: ["Short-Term", "Rental"],
+  description:
+    "Guaranteed growth in monthly short-term rental revenue, powered by attentive service that lifts ratings, visibility, and guest loyalty.",
   cta: "Contact us",
 };
 
 export const processSteps = [
   {
     step: "01",
-    title: "Contact Us",
+    title: "Start the conversation",
     description:
       "Fill out the contact form so Sea to Sky can confirm whether your property is a fit and identify where revenue can improve.",
   },
   {
     step: "02",
-    title: "Assessment",
+    title: "Shape the strategy",
     description:
       "Sea to Sky reviews the current listing, or evaluates photos and property details if the home is not live yet, then proposes a revenue plan.",
   },
   {
     step: "03",
-    title: "Transition",
+    title: "Hand over with confidence",
     description:
       "The team handles onboarding, listing setup, operational adjustments, and the move into full turnkey management.",
   },
 ];
 
 export const revenuePillars = [
-  "Dynamic Pricing",
-  "Property Optimization",
-  "Multiple Platforms",
-  "Local Partnerships",
+  {
+    title: "Dynamic pricing",
+    description:
+      "Rates respond to seasonality, demand, local events, and booking pace so every available night works harder.",
+  },
+  {
+    title: "Property optimization",
+    description:
+      "Listing presentation, guest flow, and practical details are refined to improve conversion and reviews.",
+  },
+  {
+    title: "Multiple platforms",
+    description:
+      "Your property reaches the right guests through coordinated listings across the strongest booking channels.",
+  },
+  {
+    title: "Local partnerships",
+    description:
+      "Trusted local relationships support smooth turnovers, responsive care, and memorable stays.",
+  },
 ];
 
 export const satisfactionStats = [
@@ -48,11 +60,11 @@ export const satisfactionStats = [
 ];
 
 export const properties = [
-  { type: "Villa", location: "Tulum, Mexico" },
-  { type: "Villa", location: "Playa del Carmen, Mexico" },
-  { type: "House", location: "Squamish, BC" },
-  { type: "Penthouse", location: "Vancouver, BC" },
-  { type: "Condo", location: "Vancouver, BC" },
+  { type: "Villa", location: "Tulum, Mexico", size: "large" },
+  { type: "Villa", location: "Playa del Carmen, Mexico", size: "standard" },
+  { type: "House", location: "Squamish, BC", size: "standard" },
+  { type: "Penthouse", location: "Vancouver, BC", size: "wide" },
+  { type: "Condo", location: "Vancouver, BC", size: "standard" },
 ];
 
 export const testimonials = [
@@ -81,13 +93,3 @@ export const testimonials = [
       "The management process felt more structured and the property performance became easier to understand.",
   },
 ];
-
-export const estimateFields = [
-  "Property type",
-  "Bedrooms",
-  "Bathrooms",
-  "Location",
-  "Email address",
-];
-
-export const contactFields = ["Name", "Email", "Property details"];
