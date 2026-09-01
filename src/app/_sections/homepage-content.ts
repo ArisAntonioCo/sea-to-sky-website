@@ -71,24 +71,28 @@ export const testimonials = [
   {
     name: "Kim Stallion",
     location: "Squamish, BC, Canada",
+    avatar: "/Images/avatars/kim-stallion.jpg",
     quote:
       "Sea to Sky helped improve bookings and took the day-to-day management stress off my plate.",
   },
   {
     name: "Sam Johnson",
     location: "Playa del Carmen, Mexico",
+    avatar: "/Images/avatars/sam-johnson.jpg",
     quote:
       "The visibility and guest communication improved quickly, and the property began performing at a stronger level.",
   },
   {
     name: "Trisha Nelson",
     location: "Playa del Carmen, Mexico",
+    avatar: "/Images/avatars/trisha-nelson.jpg",
     quote:
       "The team brought a more professional approach to pricing, operations, and guest support.",
   },
   {
     name: "Jamie Fields",
     location: "Tulum, Mexico",
+    avatar: "/Images/avatars/jamie-fields.avif",
     quote:
       "The management process felt more structured and the property performance became easier to understand.",
   },

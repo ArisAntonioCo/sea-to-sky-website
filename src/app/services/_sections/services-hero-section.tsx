@@ -10,7 +10,7 @@ export function ServicesHeroSection() {
     <section className="relative min-h-svh overflow-hidden bg-white px-2 pb-2 pt-20 text-white sm:px-3 sm:pb-3 sm:pt-24 lg:px-4 lg:pb-4">
       <div className="relative isolate flex min-h-[calc(100svh-5.5rem)] items-end overflow-hidden rounded-[1.5rem] bg-sea-950 px-6 py-12 sm:min-h-[calc(100svh-6.75rem)] sm:rounded-[2rem] sm:px-10 sm:py-16 lg:min-h-[calc(100svh-7rem)] lg:px-12 lg:py-20">
         <Image
-          src="/Images/properties/tulum-mexico.png"
+          src="/Images/Services.png"
           alt="A Sea to Sky managed rental property"
           fill
           priority

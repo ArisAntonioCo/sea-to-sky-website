@@ -23,24 +23,28 @@ export const aboutTestimonials = [
   {
     name: "Kim Stallion",
     location: "Squamish, BC, Canada",
+    avatar: "/Images/avatars/kim-stallion.jpg",
     quote:
       "Managing our Squamish property ourselves was tough, but Sea to Sky took over and improved everything—bookings, guest feedback, and income. Highly recommend!",
   },
   {
     name: "Sam Johnson",
     location: "Playa del Carmen, Mexico",
+    avatar: "/Images/avatars/sam-johnson.jpg",
     quote:
       "They were able to bring about 80% more revenue than we had been getting, beyond paid for itself and no more management.",
   },
   {
     name: "Trisha Nelson",
     location: "Playa del Carmen, Mexico",
+    avatar: "/Images/avatars/trisha-nelson.jpg",
     quote:
       "4.91 star rating on Airbnb has turned our cash flow around. Monthly is now over the mortgage and strata fees, which has changed everything.",
   },
   {
     name: "Jamie Fields",
     location: "Tulum, Mexico",
+    avatar: "/Images/avatars/jamie-fields.avif",
     quote:
       "Fully booked, no missed cleanings, higher rates, higher star ratings. It is exactly what they said and has been easy working with them.",
   },

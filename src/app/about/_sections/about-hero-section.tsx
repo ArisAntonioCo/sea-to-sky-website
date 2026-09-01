@@ -24,7 +24,7 @@ export function AboutHeroSection() {
 
         <div className="relative min-h-[24rem] lg:min-h-full">
           <Image
-            src="/Images/performance-section.png"
+            src="/Images/About.png"
             alt="A property manager reviewing a short-term rental"
             fill
             priority

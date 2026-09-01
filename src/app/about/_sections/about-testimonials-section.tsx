@@ -1,7 +1,7 @@
 import { Quote } from "lucide-react";
 
 import { Reveal } from "@/components/motion";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { aboutTestimonials } from "./about-content";
 
@@ -35,7 +35,8 @@ export function AboutTestimonialsSection() {
                     “{item.quote}”
                   </blockquote>
                   <footer className="mt-auto flex items-center gap-4 pt-9">
-                    <Avatar className="size-12" aria-label={`${item.name} placeholder avatar`}>
+                    <Avatar className="size-12" aria-label={item.name}>
+                      <AvatarImage src={item.avatar} alt={item.name} />
                       <AvatarFallback className={`text-sm font-medium ${avatarStyles[index]}`}>
                         {initials}
                       </AvatarFallback>
