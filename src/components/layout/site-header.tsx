@@ -81,7 +81,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <Button
-            render={<Link href="/#estimate" />}
+            render={<Link href="/contact" />}
             nativeButton={false}
             className="hidden h-12 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700 sm:inline-flex"
           >
@@ -130,7 +130,7 @@ export function SiteHeader() {
               </nav>
               <div className="mt-auto p-6">
                 <SheetClose
-                  render={<Link href="/#estimate" />}
+                  render={<Link href="/contact" />}
                   className="flex min-h-12 w-full items-center justify-center rounded-full bg-sea-800 px-6 font-medium !text-white"
                 >
                   Get an estimate
