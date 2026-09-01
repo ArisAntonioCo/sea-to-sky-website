@@ -4,8 +4,8 @@ import { Reveal } from "@/components/motion";
 
 export function AboutHeroSection() {
   return (
-    <section className="relative min-h-svh overflow-hidden bg-white px-2 pt-20 sm:px-3 sm:pt-24 lg:px-4">
-      <div className="grid min-h-[calc(100svh-5rem)] overflow-hidden rounded-[1.5rem] bg-sea-950 text-white sm:min-h-[calc(100svh-6rem)] sm:rounded-[2rem] lg:grid-cols-[0.9fr_1.1fr]">
+    <section className="relative min-h-svh overflow-hidden bg-white px-2 pb-2 pt-20 sm:px-3 sm:pb-3 sm:pt-24 lg:px-4 lg:pb-4">
+      <div className="grid min-h-[calc(100svh-5.5rem)] overflow-hidden rounded-[1.5rem] bg-sea-950 text-white sm:min-h-[calc(100svh-6.75rem)] sm:rounded-[2rem] lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[0.9fr_1.1fr]">
         <div className="flex items-end px-6 py-12 sm:px-10 sm:py-16 lg:px-12 lg:py-20">
           <Reveal>
             <p className="text-base text-white/65">About Sea to Sky</p>
