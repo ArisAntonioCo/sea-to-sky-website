@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 const navigation = [
   { label: "Our approach", href: "/#approach" },
   { label: "Properties", href: "/#properties" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const companyNavigation = [
@@ -192,7 +192,7 @@ export function SiteHeader() {
                   </div>
                 </div>
                 <SheetClose
-                  render={<Link href="/#contact" />}
+                  render={<Link href="/contact" />}
                   className="flex min-h-16 items-center justify-between border-b border-sea-900/10 text-2xl text-sea-950"
                 >
                   <span>Contact</span>

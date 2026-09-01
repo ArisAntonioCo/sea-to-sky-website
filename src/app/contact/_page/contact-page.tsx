@@ -6,7 +6,7 @@ export function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader />
-      <main className="pb-24 pt-10">
+      <main>
         <ContactHeroSection />
       </main>
       <SiteFooter />
