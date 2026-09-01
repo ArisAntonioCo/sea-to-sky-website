@@ -1,17 +1,11 @@
 "use client";
 
-import { ChevronDown, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetClose,
@@ -24,30 +18,14 @@ import {
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { label: "Our approach", href: "/#approach" },
-  { label: "Properties", href: "/#properties" },
-  { label: "Contact", href: "/contact" },
-];
-
-const companyNavigation = [
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const companyCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const openCompanyMenu = () => {
-    if (companyCloseTimer.current) clearTimeout(companyCloseTimer.current);
-    setIsCompanyOpen(true);
-  };
-
-  const closeCompanyMenu = () => {
-    companyCloseTimer.current = setTimeout(() => setIsCompanyOpen(false), 120);
-  };
 
   useEffect(() => {
     const updateHeader = () => setIsScrolled(window.scrollY > 32);
@@ -56,7 +34,6 @@ export function SiteHeader() {
     window.addEventListener("scroll", updateHeader, { passive: true });
     return () => {
       window.removeEventListener("scroll", updateHeader);
-      if (companyCloseTimer.current) clearTimeout(companyCloseTimer.current);
     };
   }, []);
 
@@ -100,33 +77,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <DropdownMenu open={isCompanyOpen} onOpenChange={setIsCompanyOpen}>
-            <DropdownMenuTrigger
-              onMouseEnter={openCompanyMenu}
-              onMouseLeave={closeCompanyMenu}
-              className="inline-flex min-h-11 items-center gap-1 py-3 outline-none transition-colors hover:text-sea-800 focus-visible:ring-2 focus-visible:ring-sea-500"
-            >
-              Company
-              <ChevronDown className="size-3.5" aria-hidden="true" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="center"
-              sideOffset={10}
-              onMouseEnter={openCompanyMenu}
-              onMouseLeave={closeCompanyMenu}
-              className="min-w-44 rounded-xl border-sea-900/10 bg-white p-2 shadow-none"
-            >
-              {companyNavigation.map((item) => (
-                <DropdownMenuItem
-                  key={item.href}
-                  render={<Link href={item.href} />}
-                  className="min-h-11 cursor-pointer rounded-lg px-3 text-base text-ink-700 focus:bg-sea-50 focus:text-sea-900"
-                >
-                  {item.label}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -167,7 +117,7 @@ export function SiteHeader() {
                 />
               </SheetHeader>
               <nav aria-label="Mobile navigation" className="flex flex-col px-6 py-8">
-                {navigation.slice(0, 2).map((item, index) => (
+                {navigation.map((item, index) => (
                   <SheetClose
                     key={item.href}
                     render={<Link href={item.href} />}
@@ -177,27 +127,6 @@ export function SiteHeader() {
                     <span className="text-sm text-sea-700">0{index + 1}</span>
                   </SheetClose>
                 ))}
-                <div className="border-b border-sea-900/10 py-5">
-                  <p className="text-sm text-sea-700">Company</p>
-                  <div className="mt-3 flex flex-col">
-                    {companyNavigation.map((item) => (
-                      <SheetClose
-                        key={item.href}
-                        render={<Link href={item.href} />}
-                        className="flex min-h-12 items-center text-xl text-sea-950"
-                      >
-                        {item.label}
-                      </SheetClose>
-                    ))}
-                  </div>
-                </div>
-                <SheetClose
-                  render={<Link href="/contact" />}
-                  className="flex min-h-16 items-center justify-between border-b border-sea-900/10 text-2xl text-sea-950"
-                >
-                  <span>Contact</span>
-                  <span className="text-sm text-sea-700">03</span>
-                </SheetClose>
               </nav>
               <div className="mt-auto p-6">
                 <SheetClose
