@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Reveal } from "@/components/motion";
 
-import { revenuePillars } from "./homepage-content";
+import { managementServices } from "./homepage-content";
 
 const shapeAssets = [
   "/svg shapes/shape.svg",
@@ -24,11 +24,11 @@ const cardStyles = [
 ];
 
 function RevenueCard({ index }: { index: number }) {
-  const pillar = revenuePillars[index];
+  const service = managementServices[index];
 
   return (
     <article
-      className={`group/card relative flex h-[clamp(32rem,76vh,48rem)] w-[clamp(21rem,29vw,38rem)] shrink-0 flex-col overflow-hidden rounded-[1.5rem] p-8 transition-colors duration-500 sm:p-10 ${cardStyles[index]} hover:bg-sea-950`}
+      className={`group/card relative flex h-[clamp(32rem,76vh,48rem)] w-[clamp(21rem,29vw,38rem)] shrink-0 flex-col overflow-hidden rounded-[1.5rem] p-8 transition-colors duration-500 sm:p-10 ${cardStyles[index % cardStyles.length]} hover:bg-sea-950`}
     >
       <div className="relative z-10 flex items-start justify-between gap-6">
         <span className="text-sm tabular-nums text-sea-700 transition-colors duration-500 group-hover/card:text-white/55">
@@ -39,15 +39,15 @@ function RevenueCard({ index }: { index: number }) {
 
       <div className="relative z-10 max-w-xl">
         <h3 className="mt-7 text-3xl font-medium text-ink-950 transition-colors duration-500 sm:text-4xl group-hover/card:text-white">
-          {pillar.title}
+          {service.title}
         </h3>
         <p className="mt-4 max-w-lg text-base leading-8 text-ink-700 transition-colors duration-500 sm:text-lg group-hover/card:text-white/62">
-          {pillar.description}
+          {service.description}
         </p>
       </div>
 
       <Image
-        src={shapeAssets[index]}
+        src={shapeAssets[index % shapeAssets.length]}
         alt=""
         width={256}
         height={256}
@@ -87,11 +87,14 @@ export function RevenueSection() {
   return (
     <section className="overflow-hidden bg-white py-24 sm:py-32 lg:py-36">
       <Reveal className="section-shell grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-        <h2 className="max-w-4xl text-4xl font-medium leading-[1.05] text-ink-950 sm:text-6xl">
-          More revenue without losing the human touch.
-        </h2>
+        <div>
+          <p className="text-base font-medium text-sea-700">Complete property management</p>
+          <h2 className="mt-5 max-w-4xl text-4xl font-medium leading-[1.05] text-ink-950 sm:text-6xl">
+            Everything handled. Nothing overlooked.
+          </h2>
+        </div>
         <p className="max-w-xl text-lg leading-8 text-ink-700 lg:justify-self-end">
-          Data informs every decision, while local knowledge and responsive guest care turn those decisions into stronger stays.
+          From the first booking inquiry to the final quality check, we manage the details that protect your property, strengthen reviews, and grow revenue.
         </p>
       </Reveal>
 
@@ -116,8 +119,8 @@ export function RevenueSection() {
           style={{ x: dragX }}
           className="flex w-max gap-5 pl-[max(1.25rem,calc((100vw-90rem)/2+3rem))] pr-5 sm:pl-[max(2rem,calc((100vw-90rem)/2+3rem))] sm:pr-8 lg:pr-12"
         >
-          {revenuePillars.map((pillar, index) => (
-            <RevenueCard key={pillar.title} index={index} />
+          {managementServices.map((service, index) => (
+            <RevenueCard key={service.title} index={index} />
           ))}
         </motion.div>
       </div>

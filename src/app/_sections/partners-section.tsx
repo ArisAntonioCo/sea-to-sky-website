@@ -6,14 +6,13 @@ const partnerLogos = [
   "/Partners/image copy 2.png",
   "/Partners/image copy 3.png",
   "/Partners/image copy 4.png",
-  "/Partners/image copy 5.png",
 ];
 
 export function PartnersSection() {
   return (
     <section
       aria-labelledby="partners-heading"
-      className="grid overflow-hidden bg-white py-3 text-ink-950 sm:grid-cols-[10rem_1fr] sm:items-center sm:py-4 lg:grid-cols-[12rem_1fr]"
+      className="grid overflow-hidden bg-white py-2 text-ink-950 sm:grid-cols-[10rem_1fr] sm:items-center sm:py-3 lg:grid-cols-[12rem_1fr]"
     >
       <div className="px-6 sm:px-8">
         <h2 id="partners-heading" className="text-base font-normal text-ink-950 sm:text-lg">

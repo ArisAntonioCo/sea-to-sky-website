@@ -1,62 +1,71 @@
 export const heroContent = {
   eyebrow: "Property management services",
-  titleTop: "Sea to Sky",
-  titleBottom: ["Short-Term", "Rental"],
+  titleTop: "Short-Term Rentals",
+  titleBottom: ["Managed", "Better"],
   description:
-    "Guaranteed growth in monthly short-term rental revenue, powered by attentive service that lifts ratings, visibility, and guest loyalty.",
-  cta: "Contact us",
+    "We manage every detail—from pricing and listings to guest support and property care—to help your rental perform at its best.",
+  cta: "Get a Free Revenue Estimate",
 };
 
 export const processSteps = [
   {
     step: "01",
-    title: "Start the conversation",
+    title: "Tell us about your property",
     description:
-      "Fill out the contact form so Sea to Sky can confirm whether your property is a fit and identify where revenue can improve.",
+      "Share a few details about your property. We’ll confirm whether we’re the right fit and identify opportunities to improve its performance.",
   },
   {
     step: "02",
-    title: "Shape the strategy",
+    title: "Get your custom revenue plan",
     description:
-      "Sea to Sky reviews the current listing, or evaluates photos and property details if the home is not live yet, then proposes a revenue plan.",
+      "We’ll review your listing, pricing, photos, amenities, and local market to create a strategy for increasing bookings and revenue.",
   },
   {
     step: "03",
-    title: "Hand over with confidence",
+    title: "We take it from here",
     description:
-      "The team handles onboarding, listing setup, operational adjustments, and the move into full turnkey management.",
+      "We handle onboarding, listing optimization, pricing, guest communication, cleaning coordination, and ongoing property management.",
   },
 ];
 
-export const revenuePillars = [
+export const managementServices = [
   {
-    title: "Dynamic pricing",
+    title: "Revenue optimization",
     description:
-      "Rates respond to seasonality, demand, local events, and booking pace so every available night works harder.",
+      "Dynamic pricing informed by demand, seasonality, and local events to improve occupancy and revenue.",
   },
   {
-    title: "Property optimization",
+    title: "Guest experience",
     description:
-      "Listing presentation, guest flow, and practical details are refined to improve conversion and reviews.",
+      "Responsive communication, seamless check-ins, local guidance, and support throughout every stay.",
   },
   {
-    title: "Multiple platforms",
+    title: "Property care",
     description:
-      "Your property reaches the right guests through coordinated listings across the strongest booking channels.",
+      "Regular inspections, maintenance coordination, and trusted local help when an issue arises.",
   },
   {
-    title: "Local partnerships",
+    title: "Listing and channel management",
     description:
-      "Trusted local relationships support smooth turnovers, responsive care, and memorable stays.",
+      "Optimized listings, availability, and presentation across the platforms guests use most.",
+  },
+  {
+    title: "Cleaning and restocking",
+    description:
+      "Professionally coordinated turnovers, quality checks, linens, and essential supplies.",
+  },
+  {
+    title: "Owner reporting",
+    description:
+      "Clear updates on revenue, occupancy, guest feedback, and your property’s overall performance.",
   },
 ];
 
 export const satisfactionStats = [
-  { target: 98, suffix: "%", display: "98%", label: "Guest Satisfaction Rating" },
-  { target: 24, suffix: "/7", display: "24/7", label: "Support" },
-  { target: 10, suffix: "", display: "10", label: "Years of Experience" },
-  { target: 1, suffix: "M+", display: "1M+", label: "Revenue Generated for Owners" },
-  { target: 85, suffix: "%", display: "85%", label: "Occupancy Rate Year-Round" },
+  { target: 98, suffix: "%", display: "98%", label: "Guest Satisfaction" },
+  { target: 24, suffix: "/7", display: "24/7", label: "Guest and Owner Support" },
+  { target: 10, suffix: "+", display: "10+", label: "Years of Experience" },
+  { target: 85, suffix: "%", display: "85%", label: "Average Annual Occupancy" },
 ];
 
 export const properties = [

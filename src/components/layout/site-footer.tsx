@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const footerNavigation = [
   { label: "Home", href: "/#home" },
-  { label: "Our approach", href: "/#approach" },
+  { label: "How it works", href: "/#approach" },
   { label: "Properties", href: "/#properties" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SiteFooter() {

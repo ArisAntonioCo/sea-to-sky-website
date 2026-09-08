@@ -79,7 +79,7 @@ export function HeroSection() {
                 {heroContent.description}
               </p>
               <Button
-                render={<Link href="#contact" />}
+                render={<Link href="/contact" />}
                 nativeButton={false}
                 className="mt-7 h-13 w-fit rounded-full bg-white px-7 text-base font-normal !text-sea-950 hover:bg-sand-100"
               >

@@ -1,19 +1,23 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
 import { Reveal } from "@/components/motion";
+import { Button } from "@/components/ui/button";
 
 import { processSteps } from "./homepage-content";
 
 export function ProcessSection() {
   return (
-    <section id="approach" className="scroll-mt-24 bg-white pb-24 pt-16 sm:pb-28 sm:pt-20 lg:pb-32 lg:pt-24">
-      <div className="section-shell grid gap-16 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
+    <section id="approach" className="scroll-mt-24 bg-white pb-24 pt-8 sm:pb-28 sm:pt-8 lg:pb-32 lg:pt-10">
+      <div className="section-shell grid gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
         <div className="lg:sticky lg:top-32 lg:h-fit">
           <Reveal>
-            <p className="text-base font-medium text-sea-700">Our approach</p>
-            <h2 className="mt-5 max-w-xl text-4xl font-medium leading-[1.05] text-ink-950 sm:text-6xl">
-              From first conversation to effortless hosting.
+            <p className="text-base font-medium text-sea-700">How it works</p>
+            <h2 className="mt-5 max-w-2xl text-4xl font-medium leading-[1.05] text-ink-950 sm:text-5xl lg:text-[3.5rem]">
+              From first conversation to effortless ownership.
             </h2>
-            <p className="mt-7 max-w-lg text-lg leading-8 text-ink-700">
-              A clear, hands-on process built around your property, your goals, and a better guest experience.
+            <p className="mt-7 max-w-xl text-lg leading-8 text-ink-700">
+              A clear, hands-on process tailored to your property, your goals, and the experience you want to provide.
             </p>
           </Reveal>
         </div>
@@ -34,6 +38,16 @@ export function ProcessSection() {
               </article>
             </Reveal>
           ))}
+          <Reveal delay={0.24}>
+            <Button
+              render={<Link href="/contact" />}
+              nativeButton={false}
+              className="mt-7 h-13 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700"
+            >
+              Get Your Free Revenue Estimate.
+              <ArrowUpRight className="size-4" />
+            </Button>
+          </Reveal>
         </div>
       </div>
     </section>
