@@ -69,9 +69,9 @@ export const satisfactionStats = [
 ];
 
 export const properties = [
-  { type: "Villa", location: "Tulum, Mexico", size: "large", image: "/Images/properties/tulum-mexico.png" },
-  { type: "Villa", location: "Playa del Carmen, Mexico", size: "standard", image: "/Images/properties/playa-del-carmen-mexico.png" },
-  { type: "House", location: "Squamish, BC", size: "standard", image: "/Images/properties/Squamish-BC.png" },
+  { type: "Villa", location: "Tulum, Mexico", size: "large", image: "/Images/properties/tulum.png" },
+  { type: "Villa", location: "Playa del Carmen, Mexico", size: "standard", image: "/Images/properties/Playas.png" },
+  { type: "House", location: "Squamish, BC", size: "standard", image: "/Images/properties/Squamish.png" },
   { type: "Penthouse", location: "Vancouver, BC", size: "wide", image: "/Images/properties/Vancouver-bc.png" },
   { type: "Condo", location: "Vancouver, BC", size: "standard", image: "/Images/Condos.png" },
 ];
