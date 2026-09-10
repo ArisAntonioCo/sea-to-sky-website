@@ -62,7 +62,7 @@ function RevenueCard({ index }: { index: number }) {
           alt={media.alt}
           fill
           sizes="(min-width: 1280px) 30vw, (min-width: 768px) 48vw, 90vw"
-          className={`object-contain transition-transform duration-700 ease-out group-hover/card:-translate-y-2 ${media.scaleClass}`}
+            className={`object-contain [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)] transition-transform duration-700 ease-out group-hover/card:-translate-y-2 ${media.scaleClass}`}
         />
       </div>
 
