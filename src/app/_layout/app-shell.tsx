@@ -18,6 +18,7 @@ export function AppShell({ children }: AppShellProps) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-white text-slate-950">

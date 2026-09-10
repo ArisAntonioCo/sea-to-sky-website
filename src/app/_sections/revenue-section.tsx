@@ -1,9 +1,5 @@
-"use client";
-
 import { ArrowUpRight } from "lucide-react";
-import { motion, useMotionValue } from "motion/react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 
 import { Reveal } from "@/components/motion";
 
@@ -28,7 +24,7 @@ function RevenueCard({ index }: { index: number }) {
 
   return (
     <article
-      className={`group/card relative flex h-[clamp(32rem,76vh,48rem)] w-[clamp(21rem,29vw,38rem)] shrink-0 flex-col overflow-hidden rounded-[1.5rem] p-8 transition-colors duration-500 sm:p-10 ${cardStyles[index % cardStyles.length]} hover:bg-sea-950`}
+      className={`group/card relative flex min-h-[30rem] flex-col overflow-hidden rounded-[1.5rem] p-8 transition-colors duration-500 sm:min-h-[32rem] sm:p-10 ${cardStyles[index % cardStyles.length]} hover:bg-sea-950`}
     >
       <div className="relative z-10 flex items-start justify-between gap-6">
         <span className="text-sm tabular-nums text-sea-700 transition-colors duration-500 group-hover/card:text-white/55">
@@ -58,34 +54,8 @@ function RevenueCard({ index }: { index: number }) {
 }
 
 export function RevenueSection() {
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [dragDistance, setDragDistance] = useState(0);
-  const [showDragCursor, setShowDragCursor] = useState(false);
-  const dragX = useMotionValue(0);
-  const cursorX = useMotionValue(0);
-  const cursorY = useMotionValue(0);
-
-  useEffect(() => {
-    const updateBounds = () => {
-      if (!viewportRef.current || !trackRef.current) return;
-      const nextDistance = Math.max(
-        trackRef.current.scrollWidth - viewportRef.current.clientWidth,
-        0,
-      );
-      setDragDistance(nextDistance);
-      dragX.set(Math.max(dragX.get(), -nextDistance));
-    };
-
-    const observer = new ResizeObserver(updateBounds);
-    if (viewportRef.current) observer.observe(viewportRef.current);
-    if (trackRef.current) observer.observe(trackRef.current);
-
-    return () => observer.disconnect();
-  }, [dragX]);
-
   return (
-    <section className="overflow-hidden bg-white py-24 sm:py-32 lg:py-36">
+    <section className="bg-white py-24 sm:py-32 lg:py-36">
       <Reveal className="section-shell grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
         <div>
           <p className="text-base font-medium text-sea-700">Complete property management</p>
@@ -98,42 +68,15 @@ export function RevenueSection() {
         </p>
       </Reveal>
 
-      <div
-        ref={viewportRef}
-        className="mt-14 cursor-grab overflow-hidden active:cursor-grabbing sm:mt-16"
-        onPointerEnter={(event) => {
-          if (event.pointerType === "mouse") setShowDragCursor(true);
-        }}
-        onPointerLeave={() => setShowDragCursor(false)}
-        onPointerMove={(event) => {
-          cursorX.set(event.clientX + 14);
-          cursorY.set(event.clientY + 14);
-        }}
-      >
-        <motion.div
-          ref={trackRef}
-          drag="x"
-          dragConstraints={{ left: -dragDistance, right: 0 }}
-          dragElastic={0.06}
-          dragMomentum
-          style={{ x: dragX }}
-          className="flex w-max gap-5 pl-[max(1.25rem,calc((100vw-90rem)/2+3rem))] pr-5 sm:pl-[max(2rem,calc((100vw-90rem)/2+3rem))] sm:pr-8 lg:pr-12"
-        >
+      <div className="section-shell mt-14 sm:mt-16">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {managementServices.map((service, index) => (
-            <RevenueCard key={service.title} index={index} />
+            <Reveal key={service.title} delay={(index % 3) * 0.06}>
+              <RevenueCard index={index} />
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
       </div>
-
-      <motion.div
-        aria-hidden="true"
-        style={{ x: cursorX, y: cursorY }}
-        animate={{ opacity: showDragCursor ? 1 : 0, scale: showDragCursor ? 1 : 0.85 }}
-        transition={{ duration: 0.18 }}
-        className="pointer-events-none fixed left-0 top-0 z-[70] hidden rounded-full bg-sea-950 px-4 py-2 text-sm text-white shadow-sm lg:block"
-      >
-        Drag
-      </motion.div>
     </section>
   );
 }

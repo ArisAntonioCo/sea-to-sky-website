@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion";
@@ -20,12 +21,25 @@ export function ProcessSection() {
               A clear, hands-on process tailored to your property, your goals, and the experience you want to provide.
             </p>
           </Reveal>
+
+          <Reveal className="mt-10 sm:mt-12" delay={0.08}>
+            <div className="relative aspect-[4/3] min-h-64 overflow-hidden rounded-[1.75rem] bg-sea-950">
+              <Image
+                src="/Images/how.png"
+                alt="Sea to Sky property management process"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 44vw, 100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-sea-950/28 via-transparent to-transparent" />
+            </div>
+          </Reveal>
         </div>
 
         <div>
           {processSteps.map((item, index) => (
             <Reveal key={item.step} delay={index * 0.08}>
-              <article className="grid gap-5 border-t border-sea-900/18 py-9 sm:grid-cols-[5rem_1fr] sm:py-11">
+              <article className={`grid gap-5 py-9 sm:grid-cols-[5rem_1fr] sm:py-11 ${index > 0 ? "border-t border-sea-900/18" : ""}`}>
                 <p className="text-sm text-sea-700">{item.step}</p>
                 <div>
                   <h3 className="text-3xl font-medium text-ink-950">
@@ -44,7 +58,7 @@ export function ProcessSection() {
               nativeButton={false}
               className="mt-7 h-13 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700"
             >
-              Get Your Free Revenue Estimate.
+              Get Your Free Revenue Estimate
               <ArrowUpRight className="size-4" />
             </Button>
           </Reveal>

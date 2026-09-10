@@ -11,8 +11,8 @@ export function ProtectionSection() {
         <Reveal>
           <div className="relative min-h-[38rem] overflow-hidden rounded-[1.75rem] lg:sticky lg:top-32">
             <Image
-              src="/Images/properties/Squamish-BC.png"
-              alt="A well-maintained Sea to Sky property in Squamish"
+              src="/Images/Property-protect.png"
+              alt="A protected Sea to Sky short-term rental property"
               fill
               sizes="(min-width: 1024px) 46vw, 100vw"
               className="object-cover"

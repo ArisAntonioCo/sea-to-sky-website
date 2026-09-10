@@ -3,19 +3,19 @@ export const specialties = [
     title: "Condos",
     description:
       "From modern high-rises to cozy units, we manage condos with precision—offering seamless guest stays and expert upkeep.",
-    image: "/Images/properties/vancouver-bc-2.png",
+    image: "/Images/Condos.png",
   },
   {
     title: "Homes",
     description:
       "Whether cozy cottages, luxury retreats, or spacious villas, we ensure every home is guest-ready and well-maintained.",
-    image: "/Images/properties/Squamish-BC.png",
+    image: "/Images/Homes.png",
   },
   {
     title: "Townhomes",
     description:
       "From charming row houses to spacious multi-level units, our team delivers top-tier management for your townhome.",
-    image: "/Images/properties/Vancouver-bc.png",
+    image: "/Images/Townhomes.png",
   },
 ];
 
