@@ -1,7 +1,16 @@
+import {
+  ChartBarIcon,
+  ClockIcon,
+  FaceSmileIcon,
+  LifebuoyIcon,
+} from "@heroicons/react/24/outline";
+
 import { AnimatedCounter, Reveal } from "@/components/motion";
 import { cn } from "@/lib/utils";
 
 import { satisfactionStats } from "./homepage-content";
+
+const satisfactionIcons = [FaceSmileIcon, LifebuoyIcon, ClockIcon, ChartBarIcon];
 
 export function SatisfactionSection() {
   return (
@@ -22,25 +31,30 @@ export function SatisfactionSection() {
         </Reveal>
 
         <div className="mt-20 grid border-t border-white/18 sm:grid-cols-2 lg:grid-cols-4">
-          {satisfactionStats.map((item, index) => (
-            <Reveal key={item.label} delay={index * 0.06}>
-              <article
-                className={cn(
-                  "min-h-48 px-5 py-8 sm:min-h-52 sm:px-6 lg:px-7",
-                  index < satisfactionStats.length - 1 ? "border-b border-white/18" : "border-b-0",
-                  index % 2 === 0 && "sm:border-r sm:border-white/18",
-                  index >= 2 && "sm:border-b-0",
-                  "lg:border-b-0",
-                  index < satisfactionStats.length - 1 ? "lg:border-r lg:border-white/18" : "lg:border-r-0",
-                )}
-              >
-                <p aria-label={item.display} className="text-4xl font-medium sm:text-5xl">
-                  <AnimatedCounter target={item.target} suffix={item.suffix} />
-                </p>
-                <p className="mt-5 max-w-40 text-sm leading-6 text-white/62">{item.label}</p>
-              </article>
-            </Reveal>
-          ))}
+          {satisfactionStats.map((item, index) => {
+            const Icon = satisfactionIcons[index];
+
+            return (
+              <Reveal key={item.label} delay={index * 0.06}>
+                <article
+                  className={cn(
+                    "min-h-48 px-5 py-8 sm:min-h-52 sm:px-6 lg:px-7",
+                    index < satisfactionStats.length - 1 ? "border-b border-white/18" : "border-b-0",
+                    index % 2 === 0 && "sm:border-r sm:border-white/18",
+                    index >= 2 && "sm:border-b-0",
+                    "lg:border-b-0",
+                    index < satisfactionStats.length - 1 ? "lg:border-r lg:border-white/18" : "lg:border-r-0",
+                  )}
+                >
+                  <Icon aria-hidden="true" className="mb-8 size-7 stroke-[1.5] text-sea-400" />
+                  <p aria-label={item.display} className="text-4xl font-medium sm:text-5xl">
+                    <AnimatedCounter target={item.target} suffix={item.suffix} />
+                  </p>
+                  <p className="mt-5 max-w-40 text-sm leading-6 text-white/62">{item.label}</p>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
         <p className="mt-7 max-w-3xl text-sm italic leading-6 text-white/48">
           Based on the performance of properties managed by Sea to Sky. Individual results vary by property, location, and season.

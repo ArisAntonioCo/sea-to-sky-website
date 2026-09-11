@@ -1,11 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { Reveal } from "@/components/motion";
-import { Button } from "@/components/ui/button";
 
-import { processSteps } from "./homepage-content";
+import { ProcessStepsSpotlight } from "./process-steps-spotlight";
 
 export function ProcessSection() {
   return (
@@ -36,33 +33,7 @@ export function ProcessSection() {
           </Reveal>
         </div>
 
-        <div>
-          {processSteps.map((item, index) => (
-            <Reveal key={item.step} delay={index * 0.08}>
-              <article className={`grid gap-5 py-9 sm:grid-cols-[5rem_1fr] sm:py-11 ${index > 0 ? "border-t border-sea-900/18" : ""}`}>
-                <p className="text-sm text-sea-700">{item.step}</p>
-                <div>
-                  <h3 className="text-3xl font-medium text-ink-950">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 max-w-xl text-base leading-8 text-ink-700 sm:text-lg">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-          <Reveal delay={0.24}>
-            <Button
-              render={<Link href="/contact" />}
-              nativeButton={false}
-              className="mt-7 h-13 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700"
-            >
-              Get Your Free Revenue Estimate
-              <ArrowUpRight className="size-4" />
-            </Button>
-          </Reveal>
-        </div>
+        <ProcessStepsSpotlight />
       </div>
     </section>
   );

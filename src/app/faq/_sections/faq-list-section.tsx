@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { faqs } from "@/app/_sections/homepage-content";
@@ -22,10 +23,18 @@ export function FaqListSection() {
               <span className="block whitespace-nowrap">before we begin.</span>
             </h1>
           </div>
-          <div className="border-t border-sea-900/16 pt-6 lg:mb-2">
-            <p className="max-w-lg text-lg leading-8 text-ink-700">
-              Learn how we care for properties, support guests, manage compliance, and protect your time as an owner.
-            </p>
+          <div className="relative min-h-64 overflow-hidden sm:min-h-72 lg:min-h-80">
+            <Image
+              src="/Images/Question.png"
+              alt="Questions about Sea to Sky property management"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-contain object-bottom [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_0%,black_55%,transparent_100%)]"
+            />
           </div>
         </Reveal>
 
