@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/button";
 
 export function FaqListSection() {
   return (
-    <section className="bg-white pb-24 pt-32 sm:pb-32 sm:pt-36 lg:pb-40 lg:pt-40">
+    <section className="bg-white pb-24 pt-28 sm:pb-32 sm:pt-32 lg:pb-40 lg:pt-32">
       <div className="section-shell">
-        <Reveal className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end lg:gap-20">
+        <Reveal className="relative grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-20">
           <div>
             <p className="text-base font-medium text-sea-700">Frequently asked questions</p>
             <h1 className="mt-5 text-[clamp(2.25rem,6vw,5.5rem)] font-medium leading-[1.02] text-ink-950">
@@ -23,22 +23,22 @@ export function FaqListSection() {
               <span className="block whitespace-nowrap">before we begin.</span>
             </h1>
           </div>
-          <div className="relative min-h-64 overflow-hidden sm:min-h-72 lg:min-h-80">
+          <div className="relative h-44 overflow-hidden sm:h-52 lg:h-60">
             <Image
               src="/Images/Question.png"
               alt="Questions about Sea to Sky property management"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-contain object-bottom [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
+              className="translate-y-5 scale-[1.48] object-contain object-bottom [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)] sm:scale-[1.56] lg:translate-y-8 lg:scale-[1.68]"
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_0%,black_55%,transparent_100%)]"
+              className="pointer-events-none absolute -inset-x-10 -bottom-10 h-28 bg-gradient-to-t from-white via-white/78 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_0%,black_52%,transparent_100%)]"
             />
           </div>
         </Reveal>
 
-        <div className="mt-20 grid gap-12 lg:mt-28 lg:grid-cols-[0.32fr_0.68fr] lg:gap-20">
+        <div className="relative z-10 mt-10 grid gap-12 sm:mt-12 lg:mt-16 lg:grid-cols-[0.32fr_0.68fr] lg:gap-20">
           <Reveal>
             <div className="lg:sticky lg:top-32">
               <p className="text-sm text-sea-600">Five essentials</p>
