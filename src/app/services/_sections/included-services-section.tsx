@@ -1,8 +1,24 @@
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArchiveBoxIcon,
+  BookOpenIcon,
+  CameraIcon,
+  CurrencyDollarIcon,
+  PaintBrushIcon,
+  PresentationChartLineIcon,
+} from "@heroicons/react/24/outline";
 
 import { Reveal } from "@/components/motion";
 
 import { includedServices } from "./services-content";
+
+const serviceIcons = [
+  PaintBrushIcon,
+  CameraIcon,
+  ArchiveBoxIcon,
+  CurrencyDollarIcon,
+  BookOpenIcon,
+  PresentationChartLineIcon,
+];
 
 export function IncludedServicesSection() {
   return (
@@ -21,19 +37,22 @@ export function IncludedServicesSection() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid border-t border-white/18 md:grid-cols-2 lg:grid-cols-3">
-          {includedServices.map((service, index) => (
-            <Reveal key={service.title} delay={(index % 3) * 0.06}>
-              <article className="group flex min-h-72 flex-col border-b border-white/18 py-8 md:px-7 md:odd:border-r lg:min-h-80 lg:border-r lg:p-9 lg:[&:nth-child(3n)]:border-r-0">
-                <div className="flex items-center justify-between text-sm text-white/42">
-                  <span>0{index + 1}</span>
-                  <ArrowUpRight className="size-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
-                </div>
-                <h3 className="mt-auto pt-12 text-3xl font-medium">{service.title}</h3>
-                <p className="mt-4 text-base leading-7 text-white/62">{service.description}</p>
-              </article>
-            </Reveal>
-          ))}
+        <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {includedServices.map((service, index) => {
+            const Icon = serviceIcons[index];
+
+            return (
+              <Reveal key={service.title} delay={(index % 3) * 0.06}>
+                <article className="flex min-h-[22rem] flex-col rounded-[1.5rem] bg-white/[0.045] p-7 text-white ring-1 ring-inset ring-white/[0.07] sm:min-h-[24rem] sm:p-9">
+                  <Icon aria-hidden="true" className="size-8 stroke-[1.35] text-sea-400" />
+                  <div className="mt-auto pt-14">
+                    <h3 className="text-3xl font-medium leading-tight">{service.title}</h3>
+                    <p className="mt-4 text-base leading-7 text-white/62">{service.description}</p>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

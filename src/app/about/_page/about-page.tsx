@@ -1,7 +1,6 @@
 import { SiteFooter, SiteHeader } from "@/components/layout";
 
 import {
-  AboutCtaSection,
   AboutHeroSection,
   AboutTestimonialsSection,
   DifferenceSection,
@@ -15,9 +14,8 @@ export function AboutPage() {
       <main>
         <AboutHeroSection />
         <SpecialtiesSection />
-        <AboutTestimonialsSection />
         <DifferenceSection />
-        <AboutCtaSection />
+        <AboutTestimonialsSection />
       </main>
       <SiteFooter />
     </div>

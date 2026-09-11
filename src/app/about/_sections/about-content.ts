@@ -15,7 +15,7 @@ export const specialties = [
     title: "Townhomes",
     description:
       "From charming row houses to spacious multi-level units, our team delivers top-tier management for your townhome.",
-    image: "/Images/Townhomes.png",
+    image: "/Images/properties/town-homes.png",
   },
 ];
 

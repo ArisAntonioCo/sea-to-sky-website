@@ -190,6 +190,65 @@ a {
   }
 }
 
+@keyframes about-owner-scroll {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.about-owner-column {
+  mask-image: linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+}
+
+.about-owner-track {
+  animation: about-owner-scroll var(--owner-scroll-duration) linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-along-path {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.path-marquee-item {
+  animation: marquee-along-path var(--path-duration) linear var(--path-delay) infinite;
+  backface-visibility: hidden;
+  contain: layout paint;
+  will-change: offset-distance;
+}
+
+.path-marquee-item-rotate {
+  offset-rotate: auto !important;
+}
+
+@keyframes contact-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(1deg);
+  }
+}
+
+.contact-float {
+  animation: contact-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.contact-float-delayed {
+  animation-delay: -3s;
+}
+
+.contact-float-reverse {
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -214,6 +273,23 @@ a {
   }
 
   .testimonial-track {
+    animation: none;
+  }
+
+  .about-owner-column {
+    mask-image: none;
+    overflow-y: auto;
+  }
+
+  .about-owner-track {
+    animation: none;
+  }
+
+  .about-owner-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .path-marquee-item {
     animation: none;
   }
 }

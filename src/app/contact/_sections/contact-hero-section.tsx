@@ -1,4 +1,5 @@
 import { Clock3, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 import { Reveal } from "@/components/motion";
 
@@ -12,8 +13,36 @@ const contactDetails = [
 
 export function ContactHeroSection() {
   return (
-    <section className="bg-white pb-24 pt-36 sm:pb-32 sm:pt-44 lg:pb-40">
-      <div className="section-shell grid gap-16 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
+    <section className="relative isolate overflow-hidden bg-white pb-24 pt-36 sm:pb-32 sm:pt-44 lg:pb-40">
+      <div className="contact-float pointer-events-none absolute left-[calc(50%_-_61.5rem)] top-[18rem] hidden size-72 xl:block" aria-hidden="true">
+        <Image
+          src="/Images/Section/revenue.png"
+          alt=""
+          fill
+          sizes="288px"
+          className="object-contain [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
+        />
+      </div>
+      <div className="contact-float contact-float-delayed pointer-events-none absolute bottom-16 left-[calc(50%_-_60rem)] hidden h-48 w-72 xl:block" aria-hidden="true">
+        <Image
+          src="/Images/Section/guest-exp.png"
+          alt=""
+          fill
+          sizes="288px"
+          className="object-contain [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
+        />
+      </div>
+      <div className="contact-float contact-float-reverse pointer-events-none absolute right-[calc(50%_-_61rem)] top-[23rem] hidden size-80 xl:block" aria-hidden="true">
+        <Image
+          src="/Images/House.png"
+          alt=""
+          fill
+          sizes="320px"
+          className="object-contain [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
+        />
+      </div>
+
+      <div className="section-shell relative z-10 grid gap-16 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
         <Reveal>
           <div className="lg:sticky lg:top-36">
             <p className="text-base font-medium text-sea-700">Contact Sea to Sky</p>
