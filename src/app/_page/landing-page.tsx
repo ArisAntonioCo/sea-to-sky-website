@@ -1,7 +1,6 @@
 import { SiteFooter, SiteHeader } from "@/components/layout";
 
 import {
-  ContactSection,
   EstimateSection,
   HeroSection,
   ProcessSection,
@@ -23,7 +22,6 @@ export function LandingPage() {
         <PropertiesSection />
         <TestimonialsSection />
         <EstimateSection />
-        <ContactSection />
       </main>
       <SiteFooter />
     </div>

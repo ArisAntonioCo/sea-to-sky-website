@@ -3,7 +3,7 @@ export const specialties = [
     title: "Condos",
     description:
       "From modern high-rises to cozy units, we manage condos with precision—offering seamless guest stays and expert upkeep.",
-    image: "/Images/Condos.png",
+    image: "/Images/properties/Condo-2.png",
   },
   {
     title: "Homes",
