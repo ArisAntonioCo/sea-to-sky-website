@@ -25,22 +25,17 @@ export function FaqSection() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <Accordion defaultValue={["faq-0"]} className="border-t border-sea-900/16">
+          <Accordion defaultValue={["faq-0"]} className="gap-3 sm:gap-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={faq.question}
                 value={`faq-${index}`}
-                className="border-sea-900/16"
+                className="group/faq-bar overflow-hidden rounded-[0.35rem] bg-white/70 transition-[background-color,transform] duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] not-last:border-b-0 data-open:-translate-y-0.5 data-open:bg-white hover:bg-white motion-reduce:transition-none motion-reduce:data-open:translate-y-0"
               >
-                <AccordionTrigger className="gap-6 rounded-none py-6 text-xl leading-snug text-ink-950 hover:no-underline sm:py-8 sm:text-2xl">
-                  <span className="flex items-start gap-5 sm:gap-8">
-                    <span className="mt-1 text-sm font-medium tabular-nums text-sea-600">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span>{faq.question}</span>
-                  </span>
+                <AccordionTrigger className="min-h-20 items-center gap-5 rounded-none px-5 py-5 text-lg leading-snug text-ink-950 hover:no-underline sm:min-h-24 sm:px-7 sm:text-2xl">
+                  <span className="pr-3">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-7 pl-10 pr-12 text-base leading-8 text-ink-700 sm:pb-9 sm:pl-16 sm:pr-16 sm:text-lg">
+                <AccordionContent className="px-5 pb-6 pr-16 text-base leading-8 text-ink-700 sm:px-7 sm:pb-8 sm:pr-24 sm:text-lg">
                   <p>{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>

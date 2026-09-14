@@ -1,8 +1,8 @@
-import { Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { FooterSignupForm } from "@/components/marketing/footer-signup-form";
+import { Button } from "@/components/ui/button";
 
 const exploreNavigation = [
   { label: "Home", href: "/#home" },
@@ -18,91 +18,17 @@ const companyNavigation = [
 
 export function SiteFooter() {
   return (
-    <footer className="overflow-hidden bg-white pt-16 text-ink-950 sm:pt-20 lg:pt-24">
-      <div className="relative flex min-h-[15rem] w-full items-center justify-center overflow-hidden px-3 text-center sm:min-h-[18rem] sm:px-5 lg:min-h-[21rem]">
-        <div className="pointer-events-none absolute bottom-8 -left-6 size-28 sm:bottom-10 sm:-left-5 sm:size-52 lg:bottom-12 lg:left-2 lg:size-68">
-          <Image
-            src="/Images/Section/guest-exp.png"
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 272px, (min-width: 640px) 208px, 112px"
-            className="scale-150 object-contain object-bottom [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
-          />
-          <Image
-            src="/Images/Section/guest-exp.png"
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 272px, (min-width: 640px) 208px, 112px"
-            className="scale-[1.53] object-contain object-bottom blur-[10px] [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)] [mask-image:linear-gradient(to_bottom,transparent_55%,black_88%)]"
-          />
-        </div>
-
-        <div className="pointer-events-none absolute -bottom-5 -right-6 size-28 sm:-bottom-8 sm:-right-5 sm:size-52 lg:right-2 lg:size-68">
-          <Image
-            src="/Images/House.png"
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 272px, (min-width: 640px) 208px, 112px"
-            className="object-contain object-bottom [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)]"
-          />
-          <Image
-            src="/Images/House.png"
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 272px, (min-width: 640px) 208px, 112px"
-            className="scale-[1.02] object-contain object-bottom blur-[10px] [filter:hue-rotate(-28deg)_saturate(0.48)_contrast(0.96)] [mask-image:linear-gradient(to_bottom,transparent_55%,black_88%)]"
-          />
-        </div>
-
-        <div className="relative z-10 w-full px-10 sm:px-36 lg:px-72 2xl:px-96">
-          <p className="text-[clamp(2.25rem,6.8vw,7rem)] font-medium leading-[0.84] tracking-normal">
-          <span className="block text-ink-950/72">Better stays</span>
-          <span className="block whitespace-nowrap bg-gradient-to-b from-ink-950/38 to-transparent bg-clip-text text-transparent">
-            Stronger returns
-          </span>
-          </p>
-        </div>
-
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[2px] [mask-image:linear-gradient(to_top,black_0%,black_48%,transparent_100%)]" />
-      </div>
-
-      <div className="relative isolate flex w-full flex-col overflow-hidden bg-[#171a19] px-7 py-8 text-white sm:px-10 sm:py-9 lg:min-h-[29rem] lg:px-16 lg:py-10 xl:px-20 2xl:px-28">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <Image
-            src="/Images/properties/Vancouver-bc.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center opacity-[0.38] [filter:saturate(0.6)_contrast(1.05)] [mask-image:linear-gradient(to_bottom,transparent_5%,black_58%,black_100%)]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#171a19] via-[#171a19]/62 to-[#171a19]/28" />
-        </div>
-
-        <div className="grid w-full gap-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.45fr_0.45fr_0.7fr] lg:gap-16 2xl:grid-cols-[1.6fr_0.5fr_0.5fr_0.8fr]">
-          <div>
-            <Link
-              href="/#home"
-              className="inline-flex min-h-11 items-center text-2xl font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            >
-              Sea to Sky
-            </Link>
-
-            <div className="mt-8 max-w-xl sm:mt-10">
-              <h2 className="text-2xl font-medium leading-tight sm:text-3xl">
-                Thoughtful management for better-performing stays
-              </h2>
-              <FooterSignupForm />
-            </div>
-          </div>
-
+    <footer className="w-full overflow-hidden bg-[#0c0e0d] text-white">
+      <div className="px-6 pb-8 pt-12 sm:px-10 sm:pb-10 sm:pt-16 lg:px-16 xl:px-20 2xl:px-28">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-2 gap-x-6 gap-y-9 lg:grid-cols-[1fr_1fr_2.2fr] lg:gap-x-12">
           <nav aria-label="Footer navigation">
-            <p className="text-sm text-white/38">Explore</p>
-            <ul className="mt-4 space-y-1 text-base text-white/78">
+            <p className="text-sm text-white/60">Explore</p>
+            <ul className="mt-4 space-y-1 text-xl font-medium sm:text-2xl">
               {exploreNavigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex min-h-8 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="inline-flex min-h-11 items-center transition-colors hover:text-white/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {item.label}
                   </Link>
@@ -112,13 +38,13 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Company navigation">
-            <p className="text-sm text-white/38">Company</p>
-            <ul className="mt-4 space-y-1 text-base text-white/78">
+            <p className="text-sm text-white/60">Company</p>
+            <ul className="mt-4 space-y-1 text-xl font-medium sm:text-2xl">
               {companyNavigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex min-h-8 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="inline-flex min-h-11 items-center transition-colors hover:text-white/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {item.label}
                   </Link>
@@ -127,29 +53,64 @@ export function SiteFooter() {
             </ul>
           </nav>
 
-          <div>
-            <p className="text-sm text-white/38">Contact</p>
+          <div className="col-span-2 min-w-0 lg:col-span-1 lg:justify-self-end lg:text-right">
+            <p className="text-sm text-white/60">Get in touch</p>
             <Link
               href="mailto:hello@seatoskyrental.com"
-              className="mt-4 inline-flex min-h-10 items-center gap-2 text-base text-white/78 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="mt-4 inline-flex min-h-11 max-w-full items-center break-all text-2xl font-medium leading-tight transition-colors hover:text-white/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-3xl xl:text-4xl"
             >
-              <Mail className="size-4" />
               hello@seatoskyrental.com
             </Link>
+            <div className="mt-3 flex max-w-2xl flex-col gap-5 lg:items-end">
+              <h2 className="text-base leading-relaxed text-white/65">
+                Thoughtful management for better-performing stays
+              </h2>
+              <Button
+                render={<Link href="/contact" />}
+                nativeButton={false}
+                className="h-12 w-fit shrink-0 rounded-full bg-white px-6 text-base font-medium !text-sea-950 hover:bg-white/85 lg:ml-auto"
+              >
+                Get in touch
+                <ArrowUpRight className="size-4" />
+              </Button>
+            </div>
           </div>
         </div>
 
-        <div className="mt-auto flex flex-col gap-3 pt-10 text-sm text-white/38 sm:flex-row sm:items-end sm:justify-between">
-          <p>© 2026 Sea to Sky. All rights reserved.</p>
-          <div className="flex flex-wrap gap-x-7 gap-y-2">
-            <Link href="/contact" className="transition-colors hover:text-white">
-              Contact
-            </Link>
-            <span>Short-term rental management</span>
-          </div>
-        </div>
+        <Link
+          href="/#home"
+          aria-label="Sea to Sky home"
+          className="relative mt-10 block aspect-[4/1] w-full overflow-hidden transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:mt-12"
+        >
+          <Image
+            src="/sea-logo-1.png"
+            alt="Sea to Sky"
+            fill
+            sizes="100vw"
+            className="object-cover object-[center_43%]"
+          />
+        </Link>
       </div>
 
+      <div className="relative isolate flex min-h-36 flex-col items-start justify-between gap-5 px-6 py-8 sm:px-10 lg:flex-row lg:items-center lg:gap-8 lg:px-16 xl:px-20 2xl:px-28">
+        <Image
+          src="/Images/properties/Vancouver-bc.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-z-20 object-cover object-[center_55%]"
+        />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-black/45" />
+        <span className="text-sm text-white/90">Short-term rental management</span>
+        <Link
+          href="/contact"
+          className="inline-flex min-h-11 items-center gap-3 text-2xl font-medium transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-3xl"
+        >
+          Let&apos;s talk about your property
+          <ArrowUpRight className="size-6 shrink-0" />
+        </Link>
+        <p className="text-sm text-white/90">© 2026 Sea to Sky. All rights reserved.</p>
+      </div>
     </footer>
   );
 }

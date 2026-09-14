@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ import { Button } from "@/components/ui/button";
 
 export function FaqListSection() {
   return (
-    <section className="bg-white pb-24 pt-28 sm:pb-32 sm:pt-32 lg:pb-40 lg:pt-32">
+    <section className="bg-white pb-0 pt-28 sm:pt-32 lg:pt-32">
       <div className="section-shell">
         <Reveal className="relative grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-20">
           <div>
@@ -49,18 +50,17 @@ export function FaqListSection() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <Accordion defaultValue={["faq-0"]} className="border-t border-sea-900/16">
+            <Accordion defaultValue={["faq-0"]} className="gap-3 sm:gap-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={faq.question} value={`faq-${index}`} className="border-sea-900/16">
-                <AccordionTrigger className="gap-6 rounded-none py-7 text-xl leading-snug text-ink-950 hover:no-underline sm:py-9 sm:text-2xl">
-                  <span className="flex items-start gap-5 sm:gap-8">
-                    <span className="mt-1 text-sm font-medium tabular-nums text-sea-600">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span>{faq.question}</span>
-                  </span>
+              <AccordionItem
+                key={faq.question}
+                value={`faq-${index}`}
+                className="group/faq-bar overflow-hidden rounded-[0.35rem] bg-[#f7f6f2] transition-[background-color,transform] duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] not-last:border-b-0 data-open:-translate-y-0.5 data-open:bg-[#f4f2ec] hover:bg-[#f4f2ec] motion-reduce:transition-none motion-reduce:data-open:translate-y-0"
+              >
+                <AccordionTrigger className="min-h-20 items-center gap-5 rounded-none px-5 py-5 text-lg leading-snug text-ink-950 hover:no-underline sm:min-h-24 sm:px-7 sm:text-2xl">
+                  <span className="pr-3">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-8 pl-10 pr-12 text-base leading-8 text-ink-700 sm:pb-10 sm:pl-16 sm:pr-16 sm:text-lg">
+                <AccordionContent className="px-5 pb-6 pr-16 text-base leading-8 text-ink-700 sm:px-7 sm:pb-8 sm:pr-24 sm:text-lg">
                   <p>{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
@@ -69,19 +69,42 @@ export function FaqListSection() {
           </Reveal>
         </div>
 
-        <Reveal className="mt-24 flex flex-col items-center border-t border-sea-900/12 pt-20 text-center sm:mt-32 sm:pt-24">
-          <h2 className="max-w-2xl text-4xl font-medium leading-tight text-ink-950 sm:text-5xl">
-            Still have a question?
-          </h2>
-          <Button
-            render={<Link href="/#contact" />}
-            nativeButton={false}
-            className="mt-7 h-13 rounded-full bg-sea-800 px-7 text-base font-normal !text-white hover:bg-sea-700"
-          >
-            Contact us
-          </Button>
-        </Reveal>
       </div>
+
+      <Reveal className="relative mt-18 min-h-[21rem] w-full overflow-hidden sm:mt-24 sm:min-h-[23rem] lg:min-h-[25rem]">
+        <Image
+          src="/Images/properties/midcentury-2.png"
+          alt="Bright mid-century living room managed by Sea to Sky"
+          fill
+          quality={75}
+          sizes="100vw"
+          className="object-cover object-[62%_center] sm:object-[58%_center] lg:object-center"
+        />
+
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,8,7,0.96)_0%,rgba(5,8,7,0.82)_38%,rgba(5,8,7,0.26)_66%,rgba(5,8,7,0.04)_100%)] sm:bg-[linear-gradient(90deg,rgba(5,8,7,0.94)_0%,rgba(5,8,7,0.76)_34%,rgba(5,8,7,0.18)_62%,rgba(5,8,7,0)_84%)]"
+        />
+
+        <div className="section-shell relative z-10 flex min-h-[21rem] items-center py-10 sm:min-h-[23rem] sm:py-12 lg:min-h-[25rem]">
+          <div className="max-w-xl text-white">
+            <h2 className="text-4xl font-medium leading-[1.04] sm:text-5xl lg:text-6xl">
+              Have a question we didn&apos;t cover?
+            </h2>
+            <p className="mt-5 max-w-md text-base leading-7 text-white/78 sm:text-lg sm:leading-8">
+              Our team is always happy to help. Reach out and we&apos;ll get back to you shortly.
+            </p>
+            <Button
+              render={<Link href="/contact" />}
+              nativeButton={false}
+              className="mt-7 h-13 rounded-full bg-white px-7 text-base font-medium !text-ink-950 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white/90 motion-reduce:transform-none motion-reduce:transition-none"
+            >
+              Contact us
+              <ArrowUpRight className="size-4" />
+            </Button>
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
