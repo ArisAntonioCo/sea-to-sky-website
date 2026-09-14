@@ -18,8 +18,8 @@ const companyNavigation = [
 
 export function SiteFooter() {
   return (
-    <footer className="overflow-hidden bg-white px-3 pt-16 text-ink-950 sm:px-5 sm:pt-20 lg:pt-24">
-      <div className="relative mx-auto flex min-h-[15rem] max-w-[100rem] items-center justify-center overflow-hidden text-center sm:min-h-[18rem] lg:min-h-[21rem]">
+    <footer className="overflow-hidden bg-white pt-16 text-ink-950 sm:pt-20 lg:pt-24">
+      <div className="relative flex min-h-[15rem] w-full items-center justify-center overflow-hidden px-3 text-center sm:min-h-[18rem] sm:px-5 lg:min-h-[21rem]">
         <div className="pointer-events-none absolute bottom-8 -left-6 size-28 sm:bottom-10 sm:-left-5 sm:size-52 lg:bottom-12 lg:left-2 lg:size-68">
           <Image
             src="/Images/Section/guest-exp.png"
@@ -54,7 +54,7 @@ export function SiteFooter() {
           />
         </div>
 
-        <div className="relative z-10 w-full px-10 sm:px-36 lg:px-72">
+        <div className="relative z-10 w-full px-10 sm:px-36 lg:px-72 2xl:px-96">
           <p className="text-[clamp(2.25rem,6.8vw,7rem)] font-medium leading-[0.84] tracking-normal">
           <span className="block text-ink-950/72">Better stays</span>
           <span className="block whitespace-nowrap bg-gradient-to-b from-ink-950/38 to-transparent bg-clip-text text-transparent">
@@ -66,7 +66,7 @@ export function SiteFooter() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[2px] [mask-image:linear-gradient(to_top,black_0%,black_48%,transparent_100%)]" />
       </div>
 
-      <div className="relative isolate mx-auto flex max-w-[110rem] flex-col overflow-hidden rounded-xl bg-[#171a19] px-7 py-8 text-white sm:px-10 sm:py-9 lg:min-h-[29rem] lg:px-14 lg:py-10">
+      <div className="relative isolate flex w-full flex-col overflow-hidden bg-[#171a19] px-7 py-8 text-white sm:px-10 sm:py-9 lg:min-h-[29rem] lg:px-16 lg:py-10 xl:px-20 2xl:px-28">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <Image
             src="/Images/properties/Vancouver-bc.png"
@@ -78,7 +78,7 @@ export function SiteFooter() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#171a19] via-[#171a19]/62 to-[#171a19]/28" />
         </div>
 
-        <div className="grid gap-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.45fr_0.45fr_0.7fr] lg:gap-16">
+        <div className="grid w-full gap-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.45fr_0.45fr_0.7fr] lg:gap-16 2xl:grid-cols-[1.6fr_0.5fr_0.5fr_0.8fr]">
           <div>
             <Link
               href="/#home"
@@ -87,7 +87,7 @@ export function SiteFooter() {
               Sea to Sky
             </Link>
 
-            <div className="mt-8 max-w-md sm:mt-10">
+            <div className="mt-8 max-w-xl sm:mt-10">
               <h2 className="text-2xl font-medium leading-tight sm:text-3xl">
                 Thoughtful management for better-performing stays
               </h2>
@@ -150,7 +150,6 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="h-3 sm:h-5" />
     </footer>
   );
 }

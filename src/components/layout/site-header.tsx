@@ -121,6 +121,7 @@ export function SiteHeader() {
                   <SheetClose
                     key={item.href}
                     render={<Link href={item.href} />}
+                    nativeButton={false}
                     className="flex min-h-16 items-center justify-between border-b border-sea-900/10 text-2xl text-sea-950"
                   >
                     <span>{item.label}</span>
@@ -131,6 +132,7 @@ export function SiteHeader() {
               <div className="mt-auto p-6">
                 <SheetClose
                   render={<Link href="/contact" />}
+                  nativeButton={false}
                   className="flex min-h-12 w-full items-center justify-center rounded-full bg-sea-800 px-6 font-medium !text-white"
                 >
                   Get an estimate

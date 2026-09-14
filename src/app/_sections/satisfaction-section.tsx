@@ -4,6 +4,7 @@ import {
   FaceSmileIcon,
   LifebuoyIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 import { AnimatedCounter, Reveal } from "@/components/motion";
 import { cn } from "@/lib/utils";
@@ -14,10 +15,21 @@ const satisfactionIcons = [FaceSmileIcon, LifebuoyIcon, ClockIcon, ChartBarIcon]
 
 export function SatisfactionSection() {
   return (
-    <section className="relative overflow-hidden bg-sea-950 py-24 text-white sm:py-32 lg:py-40">
-      <div className="absolute -right-56 -top-56 size-[38rem] rounded-full border border-white/8" />
-      <div className="absolute -right-20 -top-20 size-[22rem] rounded-full border border-white/8" />
-      <div className="section-shell relative">
+    <section className="relative isolate overflow-hidden bg-sea-950 py-24 text-white sm:py-32 lg:py-40">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <Image
+          src="/Images/hero-image.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-30 [filter:saturate(0.72)_contrast(1.05)]"
+        />
+        <div className="absolute inset-0 bg-sea-950/68" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,33,0.72)_0%,rgba(7,27,33,0.38)_55%,rgba(7,27,33,0.6)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-sea-950/72 to-transparent" />
+      </div>
+
+      <div className="section-shell relative z-10">
         <Reveal className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
             <p className="text-base font-medium text-sea-400">Care you can measure</p>
