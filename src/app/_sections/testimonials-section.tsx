@@ -25,7 +25,7 @@ function TestimonialAvatar({ name, src }: { name: string; src: string }) {
 
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <article className="flex min-h-[20rem] w-[19.5rem] shrink-0 flex-col rounded-[1.5rem] border border-sea-900/8 bg-[#f4f6f5] p-7 sm:w-[28rem] sm:p-9">
+    <article className="flex min-h-[20rem] w-[19.5rem] shrink-0 flex-col rounded-[1.5rem] bg-[#f4f6f5] p-7 sm:w-[28rem] sm:p-9">
       <Quote
         className="size-10 text-sea-700 sm:size-12"
         fill="currentColor"

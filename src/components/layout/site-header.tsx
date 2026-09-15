@@ -19,6 +19,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const navigation = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Services", href: "/services" },

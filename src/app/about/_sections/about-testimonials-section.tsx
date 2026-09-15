@@ -7,13 +7,6 @@ import { cn } from "@/lib/utils";
 
 import { aboutTestimonials } from "./about-content";
 
-const avatarStyles = [
-  "bg-[#d8e4df] text-sea-950",
-  "bg-[#d8c8b2] text-ink-950",
-  "bg-[#9bb4b3] text-sea-950",
-  "bg-sea-800 text-white",
-];
-
 const columnOrders = [
   [0, 1, 2, 3],
   [2, 3, 0, 1],
@@ -27,15 +20,20 @@ function TestimonialCard({ index }: { index: number }) {
   const initials = item.name.split(" ").map((part) => part[0]).join("");
 
   return (
-    <article className="group flex min-h-64 flex-col rounded-[1.5rem] border border-sea-900/10 bg-white p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-8">
-      <Quote className="size-7 text-sea-500" strokeWidth={1.5} />
-      <blockquote className="mt-6 text-lg font-light leading-8 text-ink-950">
+    <article className="flex min-h-[20rem] flex-col rounded-[1.5rem] bg-[#f4f6f5] p-7 sm:p-9">
+      <Quote
+        className="size-10 text-sea-700 sm:size-12"
+        fill="currentColor"
+        strokeWidth={0}
+        aria-hidden="true"
+      />
+      <blockquote className="mt-7 text-xl font-medium leading-[1.45] text-ink-950 sm:text-2xl">
         “{item.quote}”
       </blockquote>
-      <footer className="mt-auto flex items-center gap-4 pt-8">
-        <Avatar className="size-11" aria-label={item.name}>
+      <footer className="mt-auto flex items-center gap-4 pt-10">
+        <Avatar className="size-12" aria-label={item.name}>
           <AvatarImage src={item.avatar} alt={item.name} />
-          <AvatarFallback className={`text-sm font-medium ${avatarStyles[index]}`}>
+          <AvatarFallback className="bg-sea-700 text-sm font-medium text-white">
             {initials}
           </AvatarFallback>
         </Avatar>
